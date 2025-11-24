@@ -27,6 +27,7 @@ export default function PizzaGuide() {
             link={`/przewodnik/${pizza.slug}`}
             title={pizza.name}
             image={pizza.image_url}
+            showDetailsButton={true}
           >
             <p className="text-sm text-stone-600 mt-2">
               {pizza.description ? pizza.description.substring(0, 120) : ''}...

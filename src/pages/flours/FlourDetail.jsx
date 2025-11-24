@@ -52,15 +52,15 @@ export default function FlourDetail() {
 
           {/* Quick specs */}
           <div className="grid grid-cols-3 gap-4">
-            <div className="bg-stone-50 border border-stone-200 p-4 text-center">
+            <div className="bg-stone-50 border border-stone-200 border-l-4 border-l-red-700 p-4 text-center">
               <div className="text-2xl font-semibold text-red-700">{flour.w_strength}</div>
               <div className="text-sm text-stone-600">Siła W</div>
             </div>
-            <div className="bg-stone-50 border border-stone-200 p-4 text-center">
+            <div className="bg-stone-50 border border-stone-200 border-l-4 border-l-red-700 p-4 text-center">
               <div className="text-2xl font-semibold text-red-700">{flour.protein_content}%</div>
               <div className="text-sm text-stone-600">Białko</div>
             </div>
-            <div className="bg-stone-50 border border-stone-200 p-4 text-center">
+            <div className="bg-stone-50 border border-stone-200 border-l-4 border-l-red-700 p-4 text-center">
               <div className="text-2xl font-semibold text-red-700">{flour.fermentation_range}</div>
               <div className="text-sm text-stone-600">Fermentacja</div>
             </div>

@@ -268,6 +268,8 @@ export default function FloursList() {
             link={`/maki/${flour.slug}`}
             title={`${flour.brand} ${flour.name}`}
             image={flour.image_url}
+            showLeftBorder={true}
+            showDetailsButton={true}
             badge={
               <Badge variant="neutral">
                 Tipo {flour.type}
