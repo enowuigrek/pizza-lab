@@ -95,7 +95,7 @@ export const pizzas = [
     id: 3,
     name: "Capricciosa",
     slug: "capricciosa",
-    description: "Bogata pizza, której nazwa pochodzi od 'capriccio' (kaprys). Tradycyjnie zawiera szynkę, pieczarki, karczochy i oliwki. W klasycznej prezentacji składniki układa się w osobnych ćwiartkach.",
+    description: "Capricciosa to jedna z najbardziej rozpoznawalnych pizz we Włoszech i w Polsce. U nas najczęściej kojarzy się jedynie z szynką i pieczarkami, ale klasyczna wersja jest bogatsza i ma kilka składników, bez których traci swój charakter.",
     authentic: {
       ingredients: [
         { name: "pomidory", required: true },
@@ -104,35 +104,39 @@ export const pizzas = [
         { name: "pieczarki", required: true },
         { name: "karczochy (carciofi)", required: true },
         { name: "oliwki czarne", required: true },
-        { name: "oliwa z oliwek", required: false }
+        { name: "oliwa z oliwek", required: true }
       ]
     },
     avoid: [
       {
         item: "pominięcie karczocha",
-        note: "Karczoch jest kluczowym składnikiem autentycznej Capricciosa. Bez niego powstaje inna pizza."
+        note: "Karczoch jest kluczowym składnikiem autentycznej Capricciosy. Jeśli go nie ma, powstaje zupełnie inna pizza."
+      },
+      {
+        item: "zamiana szynki na samą mozzarellę i pieczarki",
+        note: "Bardzo częste w polskich pizzeriach. Taka wersja to bardziej fungi niż Capricciosa."
       }
     ],
     optional: [
       {
         item: "jajko na środku",
-        note: "W niektórych regionach Włoch dodaje się jajko. Częściej spotykane w północnych Włoszech."
+        note: "Spotykane głównie w północnych Włoszech. Nie jest klasyczną częścią oryginału, ale funkcjonuje jako lokalny wariant."
       },
       {
         item: "pieczarki z puszki vs świeże",
-        note: "Obie wersje są akceptowane. Świeże podsmażone dają lepszy smak, puszkowe są wygodniejsze."
+        note: "Obie wersje są akceptowane. Świeże dają bardziej puszysty smak, puszkowe są tradycyjniejsze i wygodniejsze."
       },
       {
         item: "prosciutto crudo zamiast cotto",
-        note: "Niektóre regiony preferują szynkę surową. Dodaje się ją po wypieczeniu."
+        note: "Niektóre regiony preferują szynkę surową dojrzewającą. Dodaje się ją po wypieczeniu."
       }
     ],
-    history: "Popularna od lat 50. XX wieku. Tradycyjnie składniki układano w czterech ćwiartkach - każdy składnik w swojej części pizzy. Dziś częściej miesza się składniki na całej powierzchni.",
+    history: "Capricciosa stała się popularna od lat 50. XX wieku. Tradycyjnie składniki układano w czterech osobnych 'ćwiartkach' — każdy składnik miał swoją część pizzy. Miało to symbolizować cztery różne 'kaprysy' kucharza. Dziś częściej miesza się składniki na całej powierzchni.",
     tips: [
-      "Karczochy użyj z puszki lub słoika (najlepiej w oleju - sott'olio)",
-      "Szynkę dodaj w połowie pieczenia lub po wypieczeniu, żeby nie wyschła",
+      "Karczochy z puszki lub słoika warto dobrze odsączyć, żeby nie puszczały wody na pizzy",
+      "Szynkę dodaj po upieczeniu lub przed końcem pieczenia, żeby nie wyschła",
       "Pieczarki świeże warto lekko podsmażyć przed dodaniem",
-      "Klasyczna prezentacja 'po ćwiartce' wygląda efektownie"
+      "Klasyczna prezentacja 'po ćwiartce' nadal wygląda bardzo efektownie"
     ],
     image_url: "/images/pizzas/capricciosa.jpg"
   },

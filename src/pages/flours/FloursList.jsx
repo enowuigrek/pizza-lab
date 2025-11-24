@@ -28,10 +28,10 @@ export default function FloursList() {
       <section className="bg-stone-50 border border-stone-200 mb-6">
         <button
           onClick={() => setTipoVsTypExpanded(!tipoVsTypExpanded)}
-          className="w-full p-6 text-left flex items-center justify-between hover:bg-stone-100 transition"
+          className="w-full p-6 text-left flex items-center justify-between hover:bg-stone-100 transition focus:outline-none"
         >
           <h2 className="text-2xl">Włoskie „Tipo" vs Polskie „Typ" — skąd ten bałagan?</h2>
-          <span className="text-2xl">{tipoVsTypExpanded ? '↑' : '↓'}</span>
+          <span className="text-2xl">{tipoVsTypExpanded ? '▴' : '▾'}</span>
         </button>
 
         {tipoVsTypExpanded && (
@@ -144,10 +144,10 @@ export default function FloursList() {
       <section className="bg-stone-50 border border-stone-200 mb-12">
         <button
           onClick={() => setParametersExpanded(!parametersExpanded)}
-          className="w-full p-6 text-left flex items-center justify-between hover:bg-stone-100 transition"
+          className="w-full p-6 text-left flex items-center justify-between hover:bg-stone-100 transition focus:outline-none"
         >
           <h2 className="text-2xl">Jak czytać parametry mąki</h2>
-          <span className="text-2xl">{parametersExpanded ? '↑' : '↓'}</span>
+          <span className="text-2xl">{parametersExpanded ? '▴' : '▾'}</span>
         </button>
 
         {parametersExpanded && (
