@@ -1,121 +1,26 @@
 export const articleStubs = [
   {
     id: 1,
-    title: "Jak zrobic poolish krok po kroku",
-    slug: "jak-zrobic-poolish",
-    category: "techniques",
-    status: "ready",
-    excerpt: "Kompletny przewodnik po robieniu poolish z proporcjami, timingiem i zdjeciami krok po kroku.",
-    tags: ["poolish", "fermentacja", "tutorial"],
-    content: `# Jak zrobic poolish krok po kroku
-
-Poolish to przedrozwoj (preferment) pochodzacy z Polski, stad nazwa. Jest to mieszanka maki i wody w proporcji 1:1 (100% hydratacji) z niewielka iloscia drozdzy.
-
-## Dlaczego poolish?
-
-- Rozwija smak ciasta
-- Poprawia teksture
-- Wydluza swiezosc
-- Ulatwia formowanie
-
-## Proporcje podstawowe
-
-- **Maka**: 100g
-- **Woda**: 100g (tyle samo co maki)
-- **Drozdze swieze**: 0.1-0.2g (szczypta)
-
-## Krok po kroku
-
-1. **Odmierz skladniki** - maka i woda w proporcji 1:1
-2. **Dodaj drozdze** - naprawde minimalna ilosc
-3. **Wymieszaj** - az polaczysz skladniki
-4. **Przykryj** - folia lub wilgotna sciereczka
-5. **Zostaw** - 1h w temperaturze pokojowej
-6. **Lodowka** - na 16-24h
-
-## Jak poznac ze poolish jest gotowy?
-
-- Powierzchnia pelna babelkow
-- Lekko opadnieta srodkowa czesc
-- Przyjemny, lekko kwaskowaty zapach
-- Konsystencja jogurtu
-
-## Wskazowki
-
-- Uzyj letniej wody (ok. 20-22°C)
-- Nie przesadzaj z drozdzami - mniej = wiecej smaku
-- Poolish jest gotowy gdy zaczyna opadac
-- Najlepiej uzyc w szczytowym momencie fermentacji`
-  },
-  {
-    id: 2,
-    title: "Caputo Pizzeria - parametry i zastosowanie",
-    slug: "caputo-pizzeria-parametry",
-    category: "flours",
-    status: "ready",
-    excerpt: "Wszystko o najpopularniejszej mace Caputo do pizzy: parametry, zastosowanie, dla kogo.",
-    tags: ["maka", "Caputo", "Pizzeria"],
-    content: `# Caputo Pizzeria - kompletny przewodnik
-
-Caputo Pizzeria (niebieska paczka) to prawdopodobnie najpopularniejsza maka do pizzy na swiecie.
-
-## Parametry techniczne
-
-- **Typ**: 00
-- **Bialko**: ~12.5%
-- **W (sila)**: 260-270
-- **P/L**: 0.55-0.60
-- **Absorpcja wody**: 55-58%
-
-## Dla kogo?
-
-Caputo Pizzeria jest idealna dla:
-- Poczatkujacych pizzaiolow
-- Krotkich fermentacji (8-24h)
-- Pieczenia w wysokich temperaturach (400-500°C)
-- Stylu neapolitanskiego
-
-## Nie uzywaj do:
-
-- Bardzo dlugich fermentacji (48h+) - lepiej Nuvola lub Cuoco
-- Niskich temperatur (domowy piekarnik) - rozwaz maki o wyzszym W
-
-## Porownanie z innymi makami Caputo
-
-| Maka | W | Fermentacja | Charakter |
-|------|---|-------------|-----------|
-| Pizzeria | 260 | 8-24h | Rustykalny |
-| Nuvola | 260 | 24-72h | Puszysty |
-| Cuoco | 320 | 48-96h | Intensywny |
-
-## Moje wskazowki
-
-- Hydratacja 60-65% dla poczatkujacych
-- 1h autolizy przed dodaniem soli
-- Nie przesadzaj z wyrabianiem`
-  },
-  {
-    id: 3,
     title: "Test: Pizzeria vs Nuvola vs 5 Stagioni",
     slug: "test-pizzeria-nuvola-5stagioni",
     category: "tests",
     status: "planned",
-    excerpt: "Porownanie trzech popularnych mak w identycznych warunkach: ten sam poolish, ta sama fermentacja, ten sam piec.",
-    tags: ["test", "porownanie", "maki"],
+    excerpt: "Porównanie trzech popularnych mąk w identycznych warunkach: ten sam poolish, ta sama fermentacja, ten sam piec.",
+    tags: ["test", "porównanie", "mąki"],
     content: "PLACEHOLDER - czekam na wyniki testu"
   },
   {
-    id: 4,
+    id: 2,
     title: "Dlaczego calzone nie jest popularny w Polsce?",
     slug: "dlaczego-calzone-nie-popularny",
     category: "philosophy",
     status: "draft",
-    excerpt: "Analiza dlaczego idealne danie na wynos nie wystartowalo w Polsce, mimo ze kebab i zapiekanki sa wszedzie.",
+    excerpt: "Analiza dlaczego idealne danie na wynos nie wystartowało w Polsce, mimo że kebab i zapiekanki są wszędzie.",
     tags: ["calzone", "analiza", "kultura"],
     content: "PLACEHOLDER"
   },
   {
-    id: 5,
+    id: 3,
     title: "Pizza Ramen - eksperyment z miso glaze",
     slug: "pizza-ramen-miso",
     category: "experiments",
@@ -125,186 +30,186 @@ Caputo Pizzeria jest idealna dla:
     content: "PLACEHOLDER"
   },
   {
-    id: 6,
-    title: "Czemu wszystkie najlepsze pizzerie robia to samo?",
+    id: 4,
+    title: "Czemu wszystkie najlepsze pizzerie robią to samo?",
     slug: "sufit-napoletan",
     category: "philosophy",
     status: "draft",
-    excerpt: "Analiza dominacji stylu neapolitanskiego i braku diversity w polskiej scenie pizzowej. Dlaczego wszyscy robia to samo?",
-    tags: ["neapolitanska", "analiza", "diversity"],
+    excerpt: "Analiza dominacji stylu neapolitańskiego i braku różnorodności w polskiej scenie pizzowej. Dlaczego wszyscy robią to samo?",
+    tags: ["neapolitańska", "analiza", "różnorodność"],
     content: "PLACEHOLDER"
   },
   {
-    id: 7,
-    title: "Salame piccante vs Pepperoni - roznice",
+    id: 5,
+    title: "Salame piccante vs Pepperoni - różnice",
     slug: "salame-piccante-vs-pepperoni",
     category: "ingredients",
     status: "ready",
-    excerpt: "Czym sie roznia te dwa pikantne salami? Pochodzenie, smak, uzycie, i dlaczego to NIE jest to samo.",
-    tags: ["salami", "skladniki", "pepperoni"],
+    excerpt: "Czym się różnią te dwa pikantne salami? Pochodzenie, smak, użycie - i dlaczego to nie jest to samo.",
+    tags: ["salami", "składniki", "pepperoni"],
     content: `# Salame piccante vs Pepperoni
 
-Jedna z najwiekszych pomylek w swiecie pizzy to mylenie salame piccante z pepperoni. To sa ROZNE produkty!
+Jedna z największych pomyłek w świecie pizzy to mylenie salame piccante z pepperoni. To są różne produkty.
 
-## Salame piccante (wloskie)
+## Salame piccante (włoskie)
 
-- **Pochodzenie**: Wlochy (rozne regiony)
-- **Mieso**: Wieprzowina
-- **Przyprawy**: Papryka ostra, czosnek, fenku
+- **Pochodzenie**: Włochy (różne regiony)
+- **Mięso**: Wieprzowina
+- **Przyprawy**: Papryka ostra, czosnek, fenkuł
 - **Tekstura**: Grubsza, wyrazista
-- **Smak**: Glebokie, zlozony, naturalny
+- **Smak**: Głęboki, złożony, naturalny
 
-## Pepperoni (amerykanskie)
+## Pepperoni (amerykańskie)
 
-- **Pochodzenie**: USA (wynaleziono przez wloskich imigrantow)
-- **Mieso**: Wieprzowina + wolowina (czesto)
-- **Przyprawy**: Papryka slodka i ostra, dymione
+- **Pochodzenie**: USA (wynalezione przez włoskich imigrantów)
+- **Mięso**: Wieprzowina + wołowina (często)
+- **Przyprawy**: Papryka słodka i ostra, dymione
 - **Tekstura**: Drobniejsza, jednolita
-- **Smak**: Bardziej dymiony, slodkawy
+- **Smak**: Bardziej dymiony, słodkawy
 
 ## Na pizzy
 
-**Salame piccante** - uklada sie w wiekszych plastrach, tluszcz sie wytapia i przesiaka do ciasta
+**Salame piccante** - układa się w większych plastrach, tłuszcz się wytapia i przesiąka do ciasta
 
-**Pepperoni** - mniejsze plastry, "miseczki" (cups) z tluszczem, bardziej chrupiace
+**Pepperoni** - mniejsze plastry, charakterystyczne "miseczki" (cups) z tłuszczem, bardziej chrupiące
 
-## Moja rekomendacja
+## Podsumowanie
 
-Dla autentycznej wloskiej pizzy - salame piccante.
-Dla pizza party w amerykanskim stylu - pepperoni.
+Dla autentycznej włoskiej pizzy - salame piccante.
+Dla pizza party w amerykańskim stylu - pepperoni.
 
-Oba sa dobre, ale to ROZNE produkty do ROZNYCH pizz!`
+Oba są dobre, ale to różne produkty do różnych pizz.`
   },
   {
-    id: 8,
-    title: "Mozzarella di Bufala - jak uzywac na pizzy",
+    id: 6,
+    title: "Mozzarella di Bufala - jak używać na pizzy",
     slug: "mozzarella-bufala-jak-uzywac",
     category: "ingredients",
     status: "ready",
-    excerpt: "Dlaczego bufala idzie na koniec, nie na poczatek. Jak nie zmarnowac drogiego sera.",
+    excerpt: "Dlaczego bufala idzie na koniec, nie na początek. Jak nie zmarnować drogiego sera.",
     tags: ["mozzarella", "bufala", "technika"],
     content: `# Mozzarella di Bufala na pizzy
 
-Mozzarella di Bufala to ser z mleka bawolow wodnych. Drogi, delikatny, niesamowity - ale trzeba wiedziec jak go uzywac.
+Mozzarella di Bufala to ser z mleka bawołów wodnych. Drogi, delikatny, niesamowity - ale trzeba wiedzieć jak go używać.
 
-## Dlaczego NIE na poczatek?
+## Dlaczego nie na początek?
 
-1. **Duzo wody** - bufala ma ok. 52% wilgotnosci vs 45% fior di latte
-2. **Delikatna** - dluzsze pieczenie = gumowata tekstura
-3. **Strata smaku** - subtelny smak ginie przy dlugim pieczeniu
+1. **Dużo wody** - bufala ma ok. 52% wilgotności vs 45% fior di latte
+2. **Delikatna** - dłuższe pieczenie = gumowata tekstura
+3. **Strata smaku** - subtelny smak ginie przy długim pieczeniu
 
-## Jak uzywac prawidlowo?
+## Jak używać prawidłowo?
 
 ### Metoda 1: Na koniec
-- Dodaj bufale 30-60 sekund przed koncem pieczenia
-- Ser lekko sie rozpusci ale zachowa teksture
+- Dodaj bufalę 30-60 sekund przed końcem pieczenia
+- Ser lekko się rozpuści ale zachowa teksturę
 
-### Metoda 2: Po wyjeciu
-- Dodaj na swieza, goraca pizze
-- Najlepiej zachowuje smak i teksture
+### Metoda 2: Po wyjęciu
+- Dodaj na świeżą, gorącą pizzę
+- Najlepiej zachowuje smak i teksturę
 
 ### Metoda 3: Zmieszana
-- Fior di latte przed pieczeniem (topi sie)
+- Fior di latte przed pieczeniem (topi się)
 - Bufala na koniec (smak i tekstura)
 
 ## Przygotowanie bufali
 
-1. Wyjmij z lodowki 30 min przed uzyciem
-2. Odsacz z plynu
-3. Pokroj lub porwij na kawalki
-4. NIE wyciskaj - stracisz kremowa teksture
+1. Wyjmij z lodówki 30 min przed użyciem
+2. Odsącz z płynu
+3. Pokrój lub porwij na kawałki
+4. Nie wyciskaj - stracisz kremową teksturę
 
-## Gdzie kupic?
+## Gdzie kupić?
 
-- Wloskie delikatesy
+- Włoskie delikatesy
 - Carrefour (czasem)
 - Online (Jak u Mammy, Casa Italiana)
 
-Pamietaj: bufala to premium produkt. Nie marnuj go na zle ciasto!`
+Bufala to premium produkt. Nie marnuj go na złe ciasto.`
   },
   {
-    id: 9,
+    id: 7,
     title: "Rosso Gargano vs San Marzano DOP",
     slug: "rosso-gargano-vs-san-marzano",
     category: "ingredients",
     status: "planned",
-    excerpt: "Test dwoch wloskich pomidorow - smak, konsystencja, cena. Czy warto przepłacac za DOP?",
-    tags: ["pomidory", "test", "skladniki"],
-    content: "PLACEHOLDER - waiting for test results"
+    excerpt: "Test dwóch włoskich pomidorów - smak, konsystencja, cena. Czy warto przepłacać za DOP?",
+    tags: ["pomidory", "test", "składniki"],
+    content: "PLACEHOLDER - oczekiwanie na wyniki testu"
   },
   {
-    id: 10,
-    title: "Jak obliczyc proporcje ciasta na pizze",
+    id: 8,
+    title: "Jak obliczyć proporcje ciasta na pizzę",
     slug: "jak-obliczyc-proporcje-ciasta",
     category: "techniques",
     status: "ready",
-    excerpt: "Matematyka ciasta: hydratacja, waga kulek, ilosc drozdzy. Baker's percentages explained.",
+    excerpt: "Matematyka ciasta: hydratacja, waga kul, ilość drożdży. Baker's percentages explained.",
     tags: ["matematyka", "proporcje", "tutorial"],
-    content: `# Jak obliczyc proporcje ciasta na pizze
+    content: `# Jak obliczyć proporcje ciasta na pizzę
 
-Baker's percentages (procenty piekarskie) to uniwersalny jezyk piekarzy na calym swiecie.
+Baker's percentages (procenty piekarskie) to uniwersalny język piekarzy na całym świecie.
 
 ## Podstawy
 
-Wszystko liczymy **od maki**. Maka = 100%.
+Wszystko liczymy **od mąki**. Mąka = 100%.
 
-- **Hydratacja 65%** = 65g wody na 100g maki
-- **Sol 2%** = 2g soli na 100g maki
-- **Drozdze 0.5%** = 0.5g drozdzy na 100g maki
+- **Hydratacja 65%** = 65g wody na 100g mąki
+- **Sól 2%** = 2g soli na 100g mąki
+- **Drożdże 0.5%** = 0.5g drożdży na 100g mąki
 
-## Przykladowe obliczenie
+## Przykładowe obliczenie
 
 **Chcesz: 4 pizze po 250g**
 
-1. Calkowita waga ciasta: 4 × 250g = 1000g
-2. Proporcje: maka 100% + woda 65% + sol 2% = 167%
-3. Maka: 1000g ÷ 1.67 = ~600g
+1. Całkowita waga ciasta: 4 × 250g = 1000g
+2. Proporcje: mąka 100% + woda 65% + sól 2% = 167%
+3. Mąka: 1000g ÷ 1.67 = ~600g
 4. Woda: 600g × 0.65 = 390g
-5. Sol: 600g × 0.02 = 12g
+5. Sól: 600g × 0.02 = 12g
 
-## Hydratacja - co wybrac?
+## Hydratacja - co wybrać?
 
 | Hydratacja | Charakter | Dla kogo |
 |------------|-----------|----------|
-| 55-60% | Suche, latwe | Poczatkujacy |
-| 60-65% | Neapolitanska | Wiekszosc |
-| 65-70% | NY style | Sredniozaawansowani |
+| 55-60% | Suche, łatwe | Początkujący |
+| 60-65% | Neapolitańska | Większość |
+| 65-70% | NY style | Średniozaawansowani |
 | 70%+ | Bardzo mokre | Zaawansowani |
 
-## Waga kulki
+## Waga kuli
 
-- **200g** - Romana (cienka, chrupiaca)
-- **250g** - Neapolitanska (standard)
-- **280-300g** - NY style (wieksza pizza)
+- **200g** - Romana (cienka, chrupiąca)
+- **250g** - Neapolitańska (standard)
+- **280-300g** - NY style (większa pizza)
 
-## Drozdze
+## Drożdże
 
-Im dluzsza fermentacja, tym mniej drozdzy:
+Im dłuższa fermentacja, tym mniej drożdży:
 - 8-12h: 1-2%
 - 24h: 0.3-0.5%
 - 48h: 0.1-0.2%
 - 72h+: 0.05-0.1%
 
-Uzyj naszego kalkulatora zeby wszystko obliczyc automatycznie!`
+Użyj naszego kalkulatora żeby wszystko obliczyć automatycznie.`
   },
   {
-    id: 11,
-    title: "Hydratacja ciasta - jak wplywa na pizze?",
+    id: 9,
+    title: "Hydratacja ciasta - jak wpływa na pizzę?",
     slug: "hydratacja-ciasta-wplyw",
     category: "techniques",
     status: "draft",
-    excerpt: "60% vs 70% hydratacji - jak zmienia sie tekstura, technika i efekt koncowy.",
+    excerpt: "60% vs 70% hydratacji - jak zmienia się tekstura, technika i efekt końcowy.",
     tags: ["hydratacja", "technika"],
     content: "PLACEHOLDER"
   },
   {
-    id: 12,
-    title: "Ile drozdzy? Przewodnik po ilosciach",
+    id: 10,
+    title: "Ile drożdży? Przewodnik po ilościach",
     slug: "ile-drozdzy-przewodnik",
     category: "techniques",
     status: "draft",
-    excerpt: "Od 2% do 0.05% - kiedy ile uzywac. Zaleznosc od czasu fermentacji i temperatury.",
-    tags: ["drozdze", "fermentacja"],
+    excerpt: "Od 2% do 0.05% - kiedy ile używać. Zależność od czasu fermentacji i temperatury.",
+    tags: ["drożdże", "fermentacja"],
     content: "PLACEHOLDER"
   }
 ];

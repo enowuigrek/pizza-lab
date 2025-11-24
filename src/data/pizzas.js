@@ -3,192 +3,231 @@ export const pizzas = [
     id: 1,
     name: "Margherita",
     slug: "margherita",
+    description: "Klasyczna pizza neapolitańska stworzona w 1889 roku dla królowej Margherity di Savoia. Kolory składników nawiązują do włoskiej flagi: czerwony (pomidor), biały (mozzarella), zielony (bazylia). To punkt odniesienia dla wszystkich pizz - prosta, ale wymagająca precyzji.",
     authentic: {
-      description: "Klasyczna pizza neapolitanska: pomidor, mozzarella, bazylia, oliwa z oliwek. Punkt odniesienia dla wszystkich pizz.",
-      ingredients: {
-        "pomidory (passata lub pelati)": { required: true, authentic: true },
-        "mozzarella (fior di latte lub bufala)": { required: true, authentic: true },
-        "swieza bazylia": { required: true, authentic: true },
-        "oliwa z oliwek extra virgin": { required: true, authentic: true },
-        "sol": { required: true, authentic: true }
-      }
+      ingredients: [
+        { name: "pomidory (passata lub pelati)", required: true },
+        { name: "mozzarella fior di latte lub di bufala", required: true },
+        { name: "świeża bazylia", required: true },
+        { name: "oliwa z oliwek extra virgin", required: true },
+        { name: "sól", required: true }
+      ]
     },
-    misconceptions: [
+    avoid: [
       {
-        item: "ser zolty (gouda, cheddar, edamski)",
-        status: "wrong",
-        note: "NIGDY! Margherita = tylko mozzarella. Ser zolty zmienia smak i teksture calkowicie."
+        item: "ser żółty (gouda, cheddar, edamski)",
+        note: "Autentyczna Margherita zawiera wyłącznie mozzarellę. Ser żółty daje zupełnie inny smak i teksturę."
       },
       {
         item: "oregano",
-        status: "wrong",
-        note: "Oregano NIE jest w Marghericie, tylko bazylia. Oregano jest w Marinara (bez sera)."
+        note: "Oregano to składnik Marinara (pizzy bez sera). W Marghericie używa się świeżej bazylii."
       },
       {
         item: "czosnek",
-        status: "wrong",
-        note: "Czosnek jest w Marinara, nie w Marghericie. To dwie rozne pizze!"
-      },
-      {
-        item: "parmezan posypany na wierzchu",
-        status: "regional",
-        note: "Nie jest w klasycznej wersji, ale niektorzy dodaja. Opcjonalne, nie wymagane."
+        note: "Czosnek jest charakterystyczny dla Marinara. Margherita opiera się na prostocie trzech głównych składników."
       }
     ],
-    history: "Stworzona w 1889 roku przez pizzaiolo Raffaele Esposito dla krolowej Margherity di Savoia. Kolory: czerwony (pomidor), bialy (mozzarella), zielony (bazylia) = flaga Wloch. Najprostsza, ale najtrudniejsza do perfekcji - nie ma sie gdzie ukryc.",
-    tips: "Bazylie dodaj PO wypieczeniu lub w ostatnich 30 sekundach pieczenia - wtedy zachowa aromat. Mozzarella bufala jest premium opcja, dodaj ja na koniec (30-60 sek przed koncem) zeby nie wyschla.",
+    optional: [
+      {
+        item: "parmezan",
+        note: "W niektórych regionach dodawany na wierzch. Nie jest częścią klasycznej receptury, ale akceptowany jako wariant."
+      },
+      {
+        item: "mozzarella di bufala zamiast fior di latte",
+        note: "Premium opcja. Bufala ma bardziej kremową teksturę i intensywniejszy smak."
+      }
+    ],
+    history: "Stworzona w 1889 roku przez pizzaiolo Raffaele Esposito z pizzerii Brandi w Neapolu. Pizza została przygotowana specjalnie dla królowej Margherity di Savoia podczas jej wizyty w Neapolu. Nazwa pochodzi od imienia królowej.",
+    tips: [
+      "Bazylię dodaj po wypieczeniu lub w ostatnich 30 sekundach - zachowa aromat i kolor",
+      "Mozzarella bufala wymaga odsączenia i dodania pod koniec pieczenia",
+      "Dobra oliwa jest kluczowa - jej smak jest wyraźnie wyczuwalny",
+      "Im prostsza pizza, tym ważniejsza jakość każdego składnika"
+    ],
     image_url: "/images/pizzas/margherita.jpg"
   },
   {
     id: 2,
     name: "Diavola",
     slug: "diavola",
+    description: "Pizza z pikantnym włoskim salami. Nazwa pochodzi od 'diavolo' (diabeł), nawiązując do ostrości. Podstawą jest pomidor, mozzarella i salame piccante - tradycyjne włoskie pikantne salami.",
     authentic: {
-      description: "Pizza z pikantnym salami. Podstawa: pomidor, mozzarella, salame piccante (wloskie pikantne salami).",
-      ingredients: {
-        "pomidory": { required: true, authentic: true },
-        "mozzarella": { required: true, authentic: true },
-        "salame piccante (wloskie pikantne salami)": { required: true, authentic: true },
-        "oliwa (opcjonalnie pikantna)": { required: false, authentic: true },
-        "swieze chili (opcjonalnie)": { required: false, authentic: true }
-      }
+      ingredients: [
+        { name: "pomidory", required: true },
+        { name: "mozzarella", required: true },
+        { name: "salame piccante", required: true },
+        { name: "oliwa z oliwek", required: false }
+      ]
     },
-    misconceptions: [
+    avoid: [
       {
-        item: "dowolne pikantne skladniki",
-        status: "partial",
-        note: "Diavola = konkretnie salame piccante, nie 'wszystko co ostre'. Mozna dodac chili, ale base to salami."
+        item: "chorizo",
+        note: "Chorizo to hiszpańska kiełbasa o innym profilu smakowym. Diavola tradycyjnie zawiera włoskie salame piccante."
       },
       {
-        item: "papryczki jalapeno",
-        status: "acceptable",
-        note: "Mozna dodac dla extra ostrosci, ale nie sa wymagane w klasycznej wersji. Bardziej amerykanski twist."
-      },
-      {
-        item: "pikantna kielbasa/chorizo",
-        status: "wrong",
-        note: "To nie to samo co salame piccante. Kielbasa ma inna teksture i smak."
-      },
-      {
-        item: "pepperoni (amerykanskie)",
-        status: "different",
-        note: "Pepperoni ≠ salame piccante. Rozne produkty, rozne pizze."
+        item: "kiełbasa krajana",
+        note: "Polska kiełbasa ma zupełnie inną teksturę i smak niż włoskie salami."
       }
     ],
-    history: "Nazwa od 'diavolo' (diabel) = ostra. Popularna w calych Wloszech, kazdy region ma swoja wersje salame. W Kalabrii uzywaja 'nduja (pasta z pikantnej kielbasy).",
-    tips: "Salame piccante dodaj PRZED pieczeniem - tluszcz sie wytopi i przesiaknie do ciasta (to jest dobre!). Jak chcesz MEGA ostrosci, dodaj swieze chili lub pikantna oliwe na koniec.",
+    optional: [
+      {
+        item: "pepperoni (amerykańskie)",
+        note: "Pepperoni to amerykańska wersja pikantnego salami. Daje inny efekt - charakterystyczne 'miseczki' z tłuszczem."
+      },
+      {
+        item: "świeże chili lub 'nduja",
+        note: "W Kalabrii często dodaje się 'nduja (pastę z pikantnej kiełbasy) dla extra ostrości."
+      },
+      {
+        item: "pikantna oliwa",
+        note: "Oliwa z chili dodana po wypieczeniu wzmacnia ostrość."
+      }
+    ],
+    history: "Popularna w całych Włoszech, choć każdy region ma własną wersję pikantnego salami. W Kalabrii używa się 'nduja, w Basilicacie - lucanica piccante. Nazwa nawiązuje do 'diabelskiej' ostrości.",
+    tips: [
+      "Salame piccante dodaj przed pieczeniem - tłuszcz wytopi się i przesiąknie do ciasta",
+      "Im cieńsze plastry, tym bardziej chrupiące po wypieczeniu",
+      "Świeże chili dodaj po wypieczeniu dla zachowania aromatu"
+    ],
     image_url: "/images/pizzas/diavola.jpg"
   },
   {
     id: 3,
     name: "Capricciosa",
     slug: "capricciosa",
+    description: "Bogata pizza, której nazwa pochodzi od 'capriccio' (kaprys). Tradycyjnie zawiera szynkę, pieczarki, karczochy i oliwki. W klasycznej prezentacji składniki układa się w osobnych ćwiartkach.",
     authentic: {
-      description: "Bogata pizza z szynka, pieczarkami, karczohem i oliwkami. 'Capriccio' = kaprys, whim.",
-      ingredients: {
-        "pomidory": { required: true, authentic: true },
-        "mozzarella": { required: true, authentic: true },
-        "szynka (prosciutto cotto - gotowana)": { required: true, authentic: true },
-        "pieczarki swieze lub konserwowe": { required: true, authentic: true },
-        "karczoch (carciofi)": { required: true, authentic: true },
-        "oliwki czarne": { required: true, authentic: true },
-        "oliwa z oliwek": { required: false, authentic: true }
-      }
+      ingredients: [
+        { name: "pomidory", required: true },
+        { name: "mozzarella", required: true },
+        { name: "prosciutto cotto (szynka gotowana)", required: true },
+        { name: "pieczarki", required: true },
+        { name: "karczochy (carciofi)", required: true },
+        { name: "oliwki czarne", required: true },
+        { name: "oliwa z oliwek", required: false }
+      ]
     },
-    misconceptions: [
+    avoid: [
       {
-        item: "brak karczocha",
-        status: "wrong",
-        note: "To NAJWIEKSZY blad w Polsce! Karczoch jest KLUCZOWY w autentycznej Capricciosa. Bez niego to po prostu 'pizza z szynka i pieczarkami'."
-      },
-      {
-        item: "tylko szynka + pieczarki",
-        status: "wrong",
-        note: "To jest drastyczne uproszczenie. Brakuje karczocha (najwazniejsze!) i oliwek."
-      },
-      {
-        item: "jajko na srodku",
-        status: "regional",
-        note: "W niektorych regionach Wloch dodaja jajko, ale NIE jest standardem. Raczej osobna wersja."
-      },
-      {
-        item: "pieczarki z puszki zatopione w wodzie",
-        status: "acceptable",
-        note: "Mozna, ale lepiej swieze podsmazone lub wysokiej jakosci konserwowe w oleju."
+        item: "pominięcie karczocha",
+        note: "Karczoch jest kluczowym składnikiem autentycznej Capricciosa. Bez niego powstaje inna pizza."
       }
     ],
-    history: "Nazwa od 'capriccio' (kaprys) = bogata w skladniki, kaprys szefa kuchni. Popularna od lat 50. XX wieku. Tradycyjnie skladniki uklada sie 'po cwiartce' (kazdy skladnik w swojej cwiartce pizzy).",
-    tips: "Karczoch uzyj z puszki/sloika (sott'olio - w oleju), swiezy wymaga dlugiego przygotowania. Szynke dodaj w polowie pieczenia lub po (zeby nie wyschla). Mozesz ulozyc skladniki 'po cwiartce' dla tradycyjnej prezentacji.",
+    optional: [
+      {
+        item: "jajko na środku",
+        note: "W niektórych regionach Włoch dodaje się jajko. Częściej spotykane w północnych Włoszech."
+      },
+      {
+        item: "pieczarki z puszki vs świeże",
+        note: "Obie wersje są akceptowane. Świeże podsmażone dają lepszy smak, puszkowe są wygodniejsze."
+      },
+      {
+        item: "prosciutto crudo zamiast cotto",
+        note: "Niektóre regiony preferują szynkę surową. Dodaje się ją po wypieczeniu."
+      }
+    ],
+    history: "Popularna od lat 50. XX wieku. Tradycyjnie składniki układano w czterech ćwiartkach - każdy składnik w swojej części pizzy. Dziś częściej miesza się składniki na całej powierzchni.",
+    tips: [
+      "Karczochy użyj z puszki lub słoika (najlepiej w oleju - sott'olio)",
+      "Szynkę dodaj w połowie pieczenia lub po wypieczeniu, żeby nie wyschła",
+      "Pieczarki świeże warto lekko podsmażyć przed dodaniem",
+      "Klasyczna prezentacja 'po ćwiartce' wygląda efektownie"
+    ],
     image_url: "/images/pizzas/capricciosa.jpg"
   },
   {
     id: 4,
     name: "Marinara",
     slug: "marinara",
+    description: "Najstarsza pizza neapolitańska - prostsza nawet od Margherity. Nie zawiera sera, tylko pomidory, czosnek, oregano i oliwę. Nazwa pochodzi od marynarzy (marinai), którzy ją jedli.",
     authentic: {
-      description: "Najstarsza pizza neapolitanska - BEZ sera! Pomidory, czosnek, oregano, oliwa. Prosta jak morze.",
-      ingredients: {
-        "pomidory": { required: true, authentic: true },
-        "czosnek": { required: true, authentic: true },
-        "oregano": { required: true, authentic: true },
-        "oliwa z oliwek extra virgin": { required: true, authentic: true },
-        "sol": { required: true, authentic: true }
-      }
+      ingredients: [
+        { name: "pomidory", required: true },
+        { name: "czosnek", required: true },
+        { name: "oregano (suszone)", required: true },
+        { name: "oliwa z oliwek extra virgin", required: true },
+        { name: "sól", required: true }
+      ]
     },
-    misconceptions: [
+    avoid: [
       {
-        item: "mozzarella lub jakikolwiek ser",
-        status: "wrong",
-        note: "Marinara NIE MA sera! To jest jej definicja. Pizza z mozzarella to juz Margherita."
+        item: "mozzarella lub inny ser",
+        note: "Marinara z definicji nie zawiera sera. Pizza z mozzarellą to już Margherita."
       },
       {
         item: "owoce morza",
-        status: "wrong",
-        note: "Marinara NIE oznacza 'z owocami morza'. Nazwa pochodzi od marynarzy, ktorzy ja jedli."
+        note: "Mimo nazwy kojarzącej się z morzem, Marinara nie zawiera owoców morza. Nazwa pochodzi od marynarzy."
       },
       {
         item: "bazylia",
-        status: "wrong",
-        note: "Bazylia jest w Marghericie. W Marinara jest oregano. To kluczowa roznica!"
+        note: "Bazylia jest składnikiem Margherity. W Marinara używa się oregano - to kluczowa różnica między tymi pizzami."
       }
     ],
-    history: "Najstarsza pizza neapolitanska, starsza niz Margherita. Nazwa od marynarzy (marinai), ktorzy ja jedli - tania, pozywna, bez skladnikow ktore sie psuja na morzu. Czosnek dziala antyseptycznie.",
-    tips: "Czosnek pokroj w plastry i rozloz rownomiernie - nie dawaj calych zabkow. Oregano susz, nie swiezy. Dobra oliwa jest kluczowa - czujesz jej smak.",
+    optional: [
+      {
+        item: "anchois (sardele)",
+        note: "W niektórych regionach dodaje się anchois. Podkreślają umami i morski charakter."
+      },
+      {
+        item: "kapary",
+        note: "Czasem dodawane razem z anchois."
+      }
+    ],
+    history: "Najstarsza pizza neapolitańska, starsza od Margherity. Jedli ją marynarze - była tania, pożywna, a składniki nie psuły się szybko na morzu. Czosnek miał też działanie antyseptyczne.",
+    tips: [
+      "Czosnek pokrój w cienkie plastry i rozłóż równomiernie",
+      "Oregano używaj suszone, nie świeże",
+      "Dobra oliwa jest kluczowa - jej smak dominuje",
+      "To świetna pizza na sprawdzenie jakości ciasta i pieca"
+    ],
     image_url: "/images/pizzas/marinara.jpg"
   },
   {
     id: 5,
     name: "Quattro Formaggi",
     slug: "quattro-formaggi",
+    description: "Pizza z czterema serami. Klasyczny zestaw to mozzarella, gorgonzola, fontina (lub taleggio) i parmezan. Może być bianca (bez pomidora) lub rossa (z pomidorem).",
     authentic: {
-      description: "Pizza z czterema serami. Klasycznie: mozzarella, gorgonzola, fontina/taleggio, parmezan. Bianca (bez pomidora) lub rossa.",
-      ingredients: {
-        "mozzarella": { required: true, authentic: true },
-        "gorgonzola": { required: true, authentic: true },
-        "fontina lub taleggio": { required: true, authentic: true },
-        "parmezan": { required: true, authentic: true },
-        "pomidory (opcjonalnie)": { required: false, authentic: true }
-      }
+      ingredients: [
+        { name: "mozzarella", required: true },
+        { name: "gorgonzola", required: true },
+        { name: "fontina lub taleggio", required: true },
+        { name: "parmezan (parmigiano reggiano)", required: true },
+        { name: "pomidory (opcjonalnie)", required: false }
+      ]
     },
-    misconceptions: [
-      {
-        item: "dowolne 4 sery",
-        status: "partial",
-        note: "Teoretycznie mozna, ale klasyczna wersja ma swoj zestaw. Cheddar czy gouda to juz nie to."
-      },
-      {
-        item: "ser zolty typu gouda/edamski",
-        status: "wrong",
-        note: "To nie sa wloskie sery! Quattro Formaggi uzywano wloskich serow o roznych charakterach."
-      },
+    avoid: [
       {
         item: "ser topiony",
-        status: "wrong",
-        note: "Sery maja byc naturalne, nie przetworzone."
+        note: "Wszystkie sery powinny być naturalne, nie przetworzone."
+      },
+      {
+        item: "ser żółty typu gouda, edamski",
+        note: "Tradycyjna Quattro Formaggi opiera się na włoskich serach o różnych charakterach."
       }
     ],
-    history: "Popularna w calych Wloszech, kazdy region ma swoja wersje. Idea: 4 sery o roznych charakterach - kremowy, ostry, lagodny, twardy.",
-    tips: "Gorgonzola jest mocna - daj mniej. Fontina sie super topi. Parmezan dodaj na koniec, nie przed pieczeniem. Mozesz dodac miod lub gruszke na koniec dla kontrastu.",
+    optional: [
+      {
+        item: "inne włoskie sery",
+        note: "Można eksperymentować z provolone, pecorino, czy stracchino - ważne, żeby sery się uzupełniały."
+      },
+      {
+        item: "miód lub gruszka",
+        note: "Popularny dodatek na koniec, szczególnie do wersji z dużą ilością gorgonzoli."
+      },
+      {
+        item: "orzechy włoskie",
+        note: "Dodają teksturę i uzupełniają serowy smak."
+      }
+    ],
+    history: "Popularna w całych Włoszech. Idea polega na połączeniu czterech serów o różnych charakterach: kremowy, ostry, łagodny i twardy. Każdy region ma własne warianty.",
+    tips: [
+      "Gorgonzola jest intensywna - dawaj jej mniej niż innych serów",
+      "Fontina i taleggio świetnie się topią",
+      "Parmezan dodaj na końcu, nie przed pieczeniem",
+      "Miód najlepiej smakuje z wersją bez pomidora (bianca)"
+    ],
     image_url: "/images/pizzas/quattro-formaggi.jpg"
   }
 ];

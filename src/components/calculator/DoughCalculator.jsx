@@ -35,40 +35,40 @@ export default function DoughCalculator() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-2">Kalkulator Ciasta na Pizze</h1>
-      <p className="text-gray-600 mb-8">
-        Oblicz dokladne proporcje dla swojej pizzy z uwzglednieniem poolish, biga lub direct dough
+    <div className="container mx-auto px-4 py-12 max-w-4xl">
+      <h1 className="text-4xl mb-4">Kalkulator ciasta na pizzę</h1>
+      <p className="text-stone-600 mb-8">
+        Oblicz dokładne proporcje dla swojej pizzy z uwzględnieniem poolish, biga lub direct dough
       </p>
 
       {/* Method Tabs */}
-      <div className="flex gap-2 mb-6 border-b overflow-x-auto">
+      <div className="flex gap-2 mb-8 border-b border-stone-200 overflow-x-auto">
         <button
           onClick={() => setMethod('direct')}
-          className={`px-6 py-3 font-semibold whitespace-nowrap ${
+          className={`px-6 py-3 font-medium whitespace-nowrap transition ${
             method === 'direct'
-              ? 'border-b-2 border-red-600 text-red-600'
-              : 'text-gray-600 hover:text-gray-900'
+              ? 'border-b-2 border-red-700 text-red-700'
+              : 'text-stone-600 hover:text-stone-900'
           }`}
         >
-          Direct (Bez zaczynu)
+          Direct (bez zaczynu)
         </button>
         <button
           onClick={() => setMethod('poolish')}
-          className={`px-6 py-3 font-semibold whitespace-nowrap ${
+          className={`px-6 py-3 font-medium whitespace-nowrap transition ${
             method === 'poolish'
-              ? 'border-b-2 border-red-600 text-red-600'
-              : 'text-gray-600 hover:text-gray-900'
+              ? 'border-b-2 border-red-700 text-red-700'
+              : 'text-stone-600 hover:text-stone-900'
           }`}
         >
           Poolish
         </button>
         <button
           onClick={() => setMethod('biga')}
-          className={`px-6 py-3 font-semibold whitespace-nowrap ${
+          className={`px-6 py-3 font-medium whitespace-nowrap transition ${
             method === 'biga'
-              ? 'border-b-2 border-red-600 text-red-600'
-              : 'text-gray-600 hover:text-gray-900'
+              ? 'border-b-2 border-red-700 text-red-700'
+              : 'text-stone-600 hover:text-stone-900'
           }`}
         >
           Biga
@@ -90,13 +90,13 @@ export default function DoughCalculator() {
       )}
 
       {/* Educational Tips */}
-      <div className="mt-8 bg-blue-50 p-6 rounded-lg">
-        <h3 className="font-bold mb-2">Wskazowki:</h3>
-        <ul className="space-y-2 text-sm">
-          <li><strong>Poolish:</strong> 50% maki = najbardziej popularne, 30% = subtelniejszy smak fermentacji</li>
-          <li><strong>Hydratacja:</strong> 60-65% = neapolitanska (latwiejsza), 70%+ = NY style (trudniejsza, mokrzejsza)</li>
-          <li><strong>Fermentacja:</strong> Dluzej = wiecej smaku + lepsza strawnosc. Minimum 24h zalecane!</li>
-          <li><strong>Drozdze:</strong> Mniej drozdzy + wiecej czasu = lepszy smak. Przy 72h+ mozesz w ogole pominac drozdze w glownym ciescie.</li>
+      <div className="mt-8 bg-stone-50 border border-stone-200 p-6">
+        <h3 className="font-semibold mb-4">Wskazówki</h3>
+        <ul className="space-y-2 text-sm text-stone-600">
+          <li><strong>Poolish:</strong> 50% mąki = najbardziej popularne, 30% = subtelniejszy smak fermentacji</li>
+          <li><strong>Hydratacja:</strong> 60-65% = neapolitańska (łatwiejsza), 70%+ = NY style (trudniejsza, mokrzejsza)</li>
+          <li><strong>Fermentacja:</strong> Dłużej = więcej smaku + lepsza strawność. Minimum 24h zalecane.</li>
+          <li><strong>Drożdże:</strong> Mniej drożdży + więcej czasu = lepszy smak. Przy 72h+ można pominąć drożdże w głównym cieście.</li>
         </ul>
       </div>
     </div>

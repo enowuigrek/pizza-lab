@@ -2,43 +2,45 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-gray-300 py-12">
+    <footer className="bg-stone-900 text-stone-400 py-16">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <span className="text-2xl">🍕</span>
-              <span className="text-xl font-bold text-white">Pizza Lab</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-8 h-8 rounded-full bg-red-700 flex items-center justify-center">
+                <div className="w-5 h-5 rounded-full bg-amber-100"></div>
+              </div>
+              <span className="text-lg font-semibold text-white">Pizza Lab</span>
             </div>
             <p className="text-sm">
-              Testy mak, fermentacji i skladnikow.
-              Przewodnik po prawdziwej pizzy.
+              Testy mąk, fermentacji i składników.
+              Przewodnik po autentycznej pizzy.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation */}
           <div>
-            <h3 className="font-bold text-white mb-4">Szybkie linki</h3>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Nawigacja</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/calculator" className="hover:text-white transition">
+                <Link to="/kalkulator" className="hover:text-white transition">
                   Kalkulator ciasta
                 </Link>
               </li>
               <li>
-                <Link to="/flours" className="hover:text-white transition">
-                  Baza mak
+                <Link to="/ciasto" className="hover:text-white transition">
+                  Ciasto i zaczyny
                 </Link>
               </li>
               <li>
-                <Link to="/pizzas" className="hover:text-white transition">
+                <Link to="/maki" className="hover:text-white transition">
+                  Baza mąk
+                </Link>
+              </li>
+              <li>
+                <Link to="/przewodnik" className="hover:text-white transition">
                   Przewodnik po pizzach
-                </Link>
-              </li>
-              <li>
-                <Link to="/techniques" className="hover:text-white transition">
-                  Techniki
                 </Link>
               </li>
             </ul>
@@ -46,21 +48,16 @@ export default function Footer() {
 
           {/* Content */}
           <div>
-            <h3 className="font-bold text-white mb-4">Tresc</h3>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Treść</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/articles" className="hover:text-white transition">
-                  Artykuly
+                <Link to="/artykuly" className="hover:text-white transition">
+                  Artykuły
                 </Link>
               </li>
               <li>
-                <Link to="/ingredients" className="hover:text-white transition">
-                  Skladniki
-                </Link>
-              </li>
-              <li>
-                <Link to="/tests" className="hover:text-white transition">
-                  Testy
+                <Link to="/skladniki" className="hover:text-white transition">
+                  Składniki
                 </Link>
               </li>
             </ul>
@@ -68,24 +65,19 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-white mb-4">Kontakt</h3>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Kontakt</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="mailto:hello@pizzalab.pl" className="hover:text-white transition">
                   hello@pizzalab.pl
                 </a>
               </li>
-              <li>
-                <a href="https://instagram.com/pizzalab" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
-                  Instagram
-                </a>
-              </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
-          <p>&copy; {new Date().getFullYear()} Pizza Lab. Wszystkie prawa zastrzezone.</p>
+        <div className="border-t border-stone-800 mt-12 pt-8 text-sm text-center text-stone-500">
+          <p>&copy; {new Date().getFullYear()} Pizza Lab</p>
         </div>
       </div>
     </footer>

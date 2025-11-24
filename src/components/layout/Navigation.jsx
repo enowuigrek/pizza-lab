@@ -1,23 +1,23 @@
 import { NavLink } from 'react-router-dom';
 
 const navItems = [
-  { path: '/calculator', label: 'Kalkulator', icon: '🧮' },
-  { path: '/flours', label: 'Maki', icon: '🌾' },
-  { path: '/pizzas', label: 'Przewodnik', icon: '📖' },
-  { path: '/techniques', label: 'Techniki', icon: '🔧' },
-  { path: '/ingredients', label: 'Skladniki', icon: '🍅' },
-  { path: '/articles', label: 'Artykuly', icon: '📝' },
+  { path: '/kalkulator', label: 'Kalkulator' },
+  { path: '/ciasto', label: 'Ciasto' },
+  { path: '/maki', label: 'Mąki' },
+  { path: '/przewodnik', label: 'Przewodnik' },
+  { path: '/skladniki', label: 'Składniki' },
+  { path: '/artykuly', label: 'Artykuły' },
 ];
 
 export default function Navigation({ mobile = false, onItemClick }) {
   const baseClasses = mobile
-    ? 'block py-2 px-3 rounded hover:bg-red-700 transition'
-    : 'px-3 py-2 rounded hover:bg-red-700 transition text-sm font-medium';
+    ? 'block py-2 px-3 hover:bg-stone-800 transition'
+    : 'px-4 py-2 text-sm tracking-wide hover:text-red-400 transition';
 
-  const activeClasses = 'bg-red-800';
+  const activeClasses = mobile ? 'bg-stone-800' : 'text-red-400';
 
   return (
-    <nav className={mobile ? 'space-y-1' : 'flex items-center space-x-1'}>
+    <nav className={mobile ? 'space-y-1' : 'flex items-center'}>
       {navItems.map((item) => (
         <NavLink
           key={item.path}
@@ -27,7 +27,6 @@ export default function Navigation({ mobile = false, onItemClick }) {
             `${baseClasses} ${isActive ? activeClasses : ''}`
           }
         >
-          <span className="mr-1">{item.icon}</span>
           {item.label}
         </NavLink>
       ))}

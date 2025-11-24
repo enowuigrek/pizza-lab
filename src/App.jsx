@@ -5,33 +5,32 @@ import Footer from './components/layout/Footer';
 // Pages
 import Home from './pages/Home';
 import Calculator from './pages/Calculator';
+import Dough from './pages/Dough';
 import FloursList from './pages/flours/FloursList';
 import FlourDetail from './pages/flours/FlourDetail';
 import PizzaGuide from './pages/pizzas/PizzaGuide';
 import PizzaDetail from './pages/pizzas/PizzaDetail';
-import TechniquesList from './pages/techniques/TechniquesList';
-import TechniqueDetail from './pages/techniques/TechniqueDetail';
 import IngredientsList from './pages/ingredients/IngredientsList';
 import IngredientDetail from './pages/ingredients/IngredientDetail';
 import ArticlesList from './pages/articles/ArticlesList';
 import ArticleDetail from './pages/articles/ArticleDetail';
-import TestsList from './pages/tests/TestsList';
-import TestDetail from './pages/tests/TestDetail';
 
 // 404 Page
 function NotFound() {
   return (
-    <div className="container mx-auto px-4 py-16 text-center">
-      <div className="text-6xl mb-4">🍕</div>
-      <h1 className="text-4xl font-bold mb-4">404 - Strona nie znaleziona</h1>
-      <p className="text-gray-600 mb-8">
-        Ups! Ta strona nie istnieje. Moze szukasz czegos innego?
+    <div className="container mx-auto px-4 py-24 text-center">
+      <div className="w-24 h-24 rounded-full bg-stone-100 mx-auto mb-8 flex items-center justify-center">
+        <div className="w-16 h-16 rounded-full bg-red-700 opacity-50"></div>
+      </div>
+      <h1 className="text-4xl mb-4">Strona nie znaleziona</h1>
+      <p className="text-stone-500 mb-8">
+        Przepraszamy, ta strona nie istnieje.
       </p>
       <a
         href="/"
-        className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition"
+        className="inline-block bg-red-700 text-white px-6 py-3 hover:bg-red-800 transition"
       >
-        Wroc na strone glowna
+        Wróć na stronę główną
       </a>
     </div>
   );
@@ -39,39 +38,34 @@ function NotFound() {
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-stone-50">
       <Header />
       <main className="flex-grow">
         <Routes>
           {/* Home */}
           <Route path="/" element={<Home />} />
 
-          {/* Calculator */}
-          <Route path="/calculator" element={<Calculator />} />
+          {/* Kalkulator */}
+          <Route path="/kalkulator" element={<Calculator />} />
 
-          {/* Flours */}
-          <Route path="/flours" element={<FloursList />} />
-          <Route path="/flours/:slug" element={<FlourDetail />} />
+          {/* Ciasto (Dough) */}
+          <Route path="/ciasto" element={<Dough />} />
 
-          {/* Pizzas */}
-          <Route path="/pizzas" element={<PizzaGuide />} />
-          <Route path="/pizzas/:slug" element={<PizzaDetail />} />
+          {/* Mąki (Flours) */}
+          <Route path="/maki" element={<FloursList />} />
+          <Route path="/maki/:slug" element={<FlourDetail />} />
 
-          {/* Techniques */}
-          <Route path="/techniques" element={<TechniquesList />} />
-          <Route path="/techniques/:slug" element={<TechniqueDetail />} />
+          {/* Przewodnik (Pizza Guide) */}
+          <Route path="/przewodnik" element={<PizzaGuide />} />
+          <Route path="/przewodnik/:slug" element={<PizzaDetail />} />
 
-          {/* Ingredients */}
-          <Route path="/ingredients" element={<IngredientsList />} />
-          <Route path="/ingredients/:slug" element={<IngredientDetail />} />
+          {/* Składniki (Ingredients) */}
+          <Route path="/skladniki" element={<IngredientsList />} />
+          <Route path="/skladniki/:slug" element={<IngredientDetail />} />
 
-          {/* Articles */}
-          <Route path="/articles" element={<ArticlesList />} />
-          <Route path="/articles/:slug" element={<ArticleDetail />} />
-
-          {/* Tests */}
-          <Route path="/tests" element={<TestsList />} />
-          <Route path="/tests/:slug" element={<TestDetail />} />
+          {/* Artykuły (Articles) */}
+          <Route path="/artykuly" element={<ArticlesList />} />
+          <Route path="/artykuly/:slug" element={<ArticleDetail />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFound />} />
