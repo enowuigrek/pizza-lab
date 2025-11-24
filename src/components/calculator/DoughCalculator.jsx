@@ -4,6 +4,7 @@ import CalculatorInputs from './CalculatorInputs';
 import CalculatorResults from './CalculatorResults';
 
 export default function DoughCalculator() {
+  const [usePreferment, setUsePreferment] = useState(false);
   const [method, setMethod] = useState('poolish');
   const [inputs, setInputs] = useState({
     numberOfPizzas: 4,
@@ -18,14 +19,16 @@ export default function DoughCalculator() {
   const [result, setResult] = useState(null);
 
   const handleCalculate = () => {
-    const recipe = calculateDough({ ...inputs, method });
+    const recipe = calculateDough({
+      ...inputs,
+      method: usePreferment ? method : 'direct'
+    });
     setResult(recipe);
   };
 
   const handleStylePreset = (style) => {
     setInputs({
       ...inputs,
-      ballWeight: pizzaStyles[style].weight,
       hydration: pizzaStyles[style].hydration
     });
   };
@@ -38,47 +41,16 @@ export default function DoughCalculator() {
     <div className="container mx-auto px-4 py-12 max-w-4xl">
       <h1 className="text-4xl mb-4">Kalkulator ciasta na pizzę</h1>
       <p className="text-stone-600 mb-8">
-        Oblicz dokładne proporcje dla swojej pizzy z uwzględnieniem poolish, biga lub direct dough
+        Oblicz dokładne proporcje dla swojej pizzy
       </p>
-
-      {/* Method Tabs */}
-      <div className="flex gap-2 mb-8 border-b border-stone-200 overflow-x-auto">
-        <button
-          onClick={() => setMethod('direct')}
-          className={`px-6 py-3 font-medium whitespace-nowrap transition ${
-            method === 'direct'
-              ? 'border-b-2 border-red-700 text-red-700'
-              : 'text-stone-600 hover:text-stone-900'
-          }`}
-        >
-          Direct (bez zaczynu)
-        </button>
-        <button
-          onClick={() => setMethod('poolish')}
-          className={`px-6 py-3 font-medium whitespace-nowrap transition ${
-            method === 'poolish'
-              ? 'border-b-2 border-red-700 text-red-700'
-              : 'text-stone-600 hover:text-stone-900'
-          }`}
-        >
-          Poolish
-        </button>
-        <button
-          onClick={() => setMethod('biga')}
-          className={`px-6 py-3 font-medium whitespace-nowrap transition ${
-            method === 'biga'
-              ? 'border-b-2 border-red-700 text-red-700'
-              : 'text-stone-600 hover:text-stone-900'
-          }`}
-        >
-          Biga
-        </button>
-      </div>
 
       {/* Input Form */}
       <CalculatorInputs
         inputs={inputs}
+        usePreferment={usePreferment}
         method={method}
+        onUsePrefermentChange={setUsePreferment}
+        onMethodChange={setMethod}
         onInputChange={handleInputChange}
         onStylePreset={handleStylePreset}
         onCalculate={handleCalculate}
