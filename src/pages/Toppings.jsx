@@ -1,0 +1,129 @@
+import { Link } from 'react-router-dom';
+
+export default function Toppings() {
+  const categories = [
+    {
+      name: 'Sery',
+      description: 'Mozzarella, parmigiano, gorgonzola i inne sery do pizzy',
+      icon: '🧀',
+      link: '/skladniki?category=sery'
+    },
+    {
+      name: 'Pomidory',
+      description: 'San Marzano, pelati i inne sosy pomidorowe',
+      icon: '🍅',
+      link: '/skladniki?category=pomidory'
+    },
+    {
+      name: 'Mięso',
+      description: 'Salami, prosciutto, pepperoni i inne mięsa',
+      icon: '🥓',
+      link: '/skladniki?category=mieso'
+    },
+    {
+      name: 'Warzywa',
+      description: 'Karczoch, rukola, pieczarki i inne warzywa',
+      icon: '🥬',
+      link: '/skladniki?category=warzywa'
+    },
+    {
+      name: 'Oleje i przyprawy',
+      description: 'Oliwa z oliwek, oregano, bazylia',
+      icon: '🫒',
+      link: '/skladniki?category=oleje'
+    }
+  ];
+
+  return (
+    <div className="container mx-auto px-4 py-12">
+      <h1 className="text-4xl mb-4">Toppingi</h1>
+      <p className="text-stone-600 mb-12 max-w-2xl">
+        Przewodnik po składnikach do pizzy. Poznaj autentyczne toppingi, ich zastosowanie
+        i gdzie je kupić w Polsce.
+      </p>
+
+      {/* Info */}
+      <div className="bg-stone-50 border border-stone-200 p-6 mb-12">
+        <h2 className="text-xl mb-3 font-semibold">O składnikach</h2>
+        <p className="text-stone-700 mb-4">
+          Pizza to nie tylko ciasto — to harmonia składników. W tej sekcji znajdziesz
+          informacje o autentycznych włoskich produktach oraz ich polskich odpowiednikach.
+        </p>
+        <p className="text-stone-700">
+          Opisujemy różnice między składnikami używanymi we Włoszech a tymi dostępnymi
+          w Polsce, bez oceniania — po prostu edukujemy.
+        </p>
+      </div>
+
+      {/* Categories grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {categories.map((category, index) => (
+          <Link
+            key={index}
+            to={category.link}
+            className="bg-white border border-stone-200 p-6 hover:border-stone-300 transition"
+          >
+            <div className="text-4xl mb-4">{category.icon}</div>
+            <h3 className="text-xl font-semibold mb-2">{category.name}</h3>
+            <p className="text-sm text-stone-600">{category.description}</p>
+          </Link>
+        ))}
+      </div>
+
+      {/* Guide sections */}
+      <div className="grid md:grid-cols-2 gap-8">
+        <div className="bg-green-50 border-l-4 border-green-700 p-6">
+          <h3 className="text-lg font-semibold mb-3">Składniki autentyczne</h3>
+          <p className="text-sm text-stone-700 mb-3">
+            W tej sekcji opisujemy oryginalne składniki używane we Włoszech.
+            Dowiesz się, czym charakteryzują się produkty z certyfikatami
+            DOP, IGP i STG.
+          </p>
+          <Link
+            to="/skladniki"
+            className="text-sm text-green-800 font-semibold hover:underline"
+          >
+            Zobacz wszystkie składniki →
+          </Link>
+        </div>
+
+        <div className="bg-amber-50 border-l-4 border-amber-600 p-6">
+          <h3 className="text-lg font-semibold mb-3">Polskie alternatywy</h3>
+          <p className="text-sm text-stone-700 mb-3">
+            Nie każdy ma dostęp do włoskich produktów. Pokazujemy, jak
+            dobrać polskie zamienniki i na co zwrócić uwagę przy wyborze.
+          </p>
+          <Link
+            to="/artykuly"
+            className="text-sm text-amber-800 font-semibold hover:underline"
+          >
+            Przeczytaj artykuły →
+          </Link>
+        </div>
+      </div>
+
+      {/* Tips */}
+      <div className="mt-12 bg-stone-100 border border-stone-200 p-8">
+        <h3 className="text-xl mb-4">Gdzie kupować składniki?</h3>
+        <div className="grid md:grid-cols-2 gap-6 text-sm">
+          <div>
+            <h4 className="font-semibold mb-2">Sklepy online</h4>
+            <ul className="space-y-1 text-stone-600">
+              <li>• Jak u Mammy</li>
+              <li>• Casa Italiana</li>
+              <li>• Italian Market</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-2">Sklepy stacjonarne</h4>
+            <ul className="space-y-1 text-stone-600">
+              <li>• Włoskie delikatesy lokalne</li>
+              <li>• Carrefour - dział międzynarodowy</li>
+              <li>• Auchan - sekcja włoska</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

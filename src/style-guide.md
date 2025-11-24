@@ -1,11 +1,5 @@
 # Pizza Lab - Style Guide
 
-## Filozofia projektu
-Pizza Lab to polska platforma wiedzy o pizzy. Prezentujemy informacje rzeczowo, bez oceniania.
-Opisujemy różnice między wersjami autentycznymi a lokalnymi adaptacjami - nie krytykujemy, edukujemy.
-
----
-
 ## Kolorystyka
 
 ### Paleta główna (włoskie kolory)
@@ -46,7 +40,7 @@ Opisujemy różnice między wersjami autentycznymi a lokalnymi adaptacjami - nie
 ## Kształty i elementy
 
 ### Zaokrąglenia
-- **Minimalne**: preferujemy ostre krawędzie lub bardzo małe zaokrąglenia (rounded-sm)
+- **Minimalne**: preferujemy ostre krawędzie lub brak zaokrągleń
 - **Wyjątek**: elementy okrągłe/koliste nawiązujące do pizzy (badges, avatary, ikony)
 
 ### Koła (nawiązanie do pizzy)
@@ -56,8 +50,8 @@ Opisujemy różnice między wersjami autentycznymi a lokalnymi adaptacjami - nie
   - Okrągłe wskaźniki/bulletsy
 
 ### Cienie
-- Minimalne, subtelne cienie (shadow-sm)
-- Unikamy głębokich cieni
+- Minimalne lub bez cieni - preferujemy ramki
+- Używamy border zamiast shadow
 
 ### Ramki
 - Preferujemy cienkie ramki (border) zamiast cieni
@@ -68,7 +62,7 @@ Opisujemy różnice między wersjami autentycznymi a lokalnymi adaptacjami - nie
 ## Ikony i grafika
 
 ### Zasady
-- **BEZ EMOJI** w interfejsie
+- **BEZ EMOJI** w interfejsie (wyjątek: sekcje edukacyjne z flagami 🇮🇹 🇵🇱)
 - Logo pizzy jako jedyny element graficzny (placeholder)
 - Proste, liniowe ikony jeśli potrzebne (Lucide, Heroicons outline)
 - Zdjęcia: wysokiej jakości, naturalne kolory
@@ -79,68 +73,18 @@ Opisujemy różnice między wersjami autentycznymi a lokalnymi adaptacjami - nie
 
 ---
 
-## Ton komunikacji
-
-### Zasady
-- Rzeczowy, edukacyjny
-- Bez oceniania i krytyki
-- "W klasycznej wersji używa się..." zamiast "Błędem jest używanie..."
-- "Polska adaptacja często zawiera..." zamiast "W Polsce źle robią..."
-- Szacunek dla różnych tradycji kulinarnych
-
-### Przykłady
-❌ "Niestety w Polsce pizza jest robiona źle"
-✅ "Polska wersja różni się od włoskiego oryginału"
-
-❌ "NIGDY nie używaj sera żółtego!"
-✅ "Autentyczna wersja zawiera mozzarellę"
-
----
-
-## Struktura sekcji w przewodniku po pizzach
-
-1. **Opis** - co to za pizza, skąd pochodzi
-2. **Autentyczne składniki** (zielona sekcja) - co zawiera klasyczna wersja
-3. **Czego unikać** (czerwona sekcja) - składniki które nie pasują do tej pizzy
-4. **Warianty i opcje** (złota/amber sekcja) - regionalne różnice, dopuszczalne modyfikacje
-5. **Historia** - kontekst historyczny
-6. **Wskazówki** - praktyczne tipy
-
----
-
-## Struktura nawigacji
-
-```
-/ (Home)
-├── /kalkulator
-├── /ciasto
-│   ├── /ciasto/zaczyny (poolish, biga, etc.)
-│   └── /ciasto/parametry
-├── /maki
-│   ├── /maki/jak-czytac-parametry (intro przed listą)
-│   └── /maki/[slug]
-├── /przewodnik (pizze)
-│   └── /przewodnik/[slug]
-├── /skladniki
-│   └── /skladniki/[slug]
-└── /artykuly
-    └── /artykuly/[slug]
-```
-
----
-
 ## Komponenty
 
 ### Karty
-- Minimalne zaokrąglenia (rounded-sm lub rounded)
+- Brak zaokrągleń (ostre krawędzie)
 - Cienka ramka (border border-stone-200)
-- Brak lub minimalny cień
-- Hover: subtelna zmiana tła lub ramki
+- Brak cieni
+- Hover: subtelna zmiana ramki (border-stone-300)
 
 ### Przyciski
 - Primary: czerwony, wypełniony
 - Secondary: biały z ramką
-- Minimalne zaokrąglenia
+- Brak zaokrągleń
 - Bez cieni
 
 ### Badges/Tagi
@@ -151,7 +95,13 @@ Opisujemy różnice między wersjami autentycznymi a lokalnymi adaptacjami - nie
 ### Sekcje informacyjne
 - Lewa ramka jako akcent (border-l-4)
 - Subtelne tło
-- Bez zaokrągleń lub minimalne
+- Bez zaokrągleń
+
+### Sekcje rozwijane (Collapsible)
+- Bez zaokrągleń
+- Cienka ramka
+- Przycisk + lub − do rozwijania
+- Hover: subtelne tło (bg-stone-100)
 
 ---
 
@@ -161,5 +111,6 @@ Opisujemy różnice między wersjami autentycznymi a lokalnymi adaptacjami - nie
 - Utworzenie style guide
 - Definicja palety kolorów (włoskie kolory)
 - Zasady typografii
-- Zasady komunikacji (neutralny ton)
-- Struktura nawigacji
+- Usunięcie zaokrągleń z kart
+- Dodanie sekcji rozwijanych
+- Przeniesienie notatek biznesowych do PROJECT_NOTES.md

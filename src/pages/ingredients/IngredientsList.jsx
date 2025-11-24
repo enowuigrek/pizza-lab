@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../../components/common/Card';
 import Badge from '../../components/common/Badge';
@@ -70,6 +71,8 @@ const ingredients = [
 ];
 
 export default function IngredientsList() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
   const categoryColors = {
     sery: 'warning',
     pomidory: 'danger',
@@ -78,11 +81,19 @@ export default function IngredientsList() {
     oleje: 'info',
   };
 
-  const priceIcons = {
-    niska: '💰',
-    srednia: '💰💰',
-    wysoka: '💰💰💰',
-  };
+  const categories = [
+    { value: 'all', label: 'Wszystkie' },
+    { value: 'sery', label: 'Sery' },
+    { value: 'pomidory', label: 'Pomidory' },
+    { value: 'mieso', label: 'Mięso' },
+    { value: 'warzywa', label: 'Warzywa' },
+    { value: 'oleje', label: 'Oleje' },
+  ];
+
+  // Filter ingredients by category
+  const filteredIngredients = selectedCategory === 'all'
+    ? ingredients
+    : ingredients.filter(ingredient => ingredient.category === selectedCategory);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -93,25 +104,23 @@ export default function IngredientsList() {
 
       {/* Category filters */}
       <div className="flex flex-wrap gap-2 mb-8">
-        <button className="px-4 py-2 bg-red-600 text-white rounded-full text-sm font-semibold">
-          Wszystkie
-        </button>
-        <button className="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200">
-          Sery
-        </button>
-        <button className="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200">
-          Pomidory
-        </button>
-        <button className="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200">
-          Mieso
-        </button>
-        <button className="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200">
-          Warzywa
-        </button>
+        {categories.map(category => (
+          <button
+            key={category.value}
+            onClick={() => setSelectedCategory(category.value)}
+            className={`px-4 py-2 text-sm transition border ${
+              selectedCategory === category.value
+                ? 'bg-red-700 text-white border-red-700'
+                : 'bg-white text-stone-700 border-stone-300 hover:border-red-700'
+            }`}
+          >
+            {category.label}
+          </button>
+        ))}
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {ingredients.map(ingredient => (
+        {filteredIngredients.map(ingredient => (
           <Card
             key={ingredient.id}
             link={`/ingredients/${ingredient.slug}`}
@@ -123,15 +132,12 @@ export default function IngredientsList() {
             }
           >
             <p className="text-sm text-gray-600 mt-2">{ingredient.description}</p>
-            <div className="mt-3 text-sm">
-              Cena: {priceIcons[ingredient.priceRange]}
-            </div>
           </Card>
         ))}
       </div>
 
       {/* Tip */}
-      <div className="mt-12 bg-green-50 p-6 rounded-lg">
+      <div className="mt-12 bg-green-50 p-6 border border-green-200">
         <h3 className="font-bold text-lg mb-2">Gdzie kupowac?</h3>
         <p className="text-gray-600 mb-4">
           Najlepsze skladniki znajdziesz w specjalistycznych sklepach:

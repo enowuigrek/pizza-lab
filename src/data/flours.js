@@ -6,10 +6,10 @@ export const flours = [
     type: "00",
     protein_content: 12.5,
     w_strength: 260,
-    description: "Klasyczna mąka do pizzy neapolitańskiej. Tipo 00, idealna na krótsze fermentacje (do 24h).",
+    description: "Caputo Pizzeria to jedna z najbardziej rozpoznawalnych włoskich mąk do pizzy. Ta czerwona paczka pojawia się często w lokalach, bo jest po prostu popularna, przewidywalna i stabilna.",
     ideal_for: ["krótka fermentacja", "neapolitańska", "piec do pizzy"],
     fermentation_range: "12-24h",
-    notes: "Rustykalny charakter, chrupiące krawędzie, bardziej zbożowy smak. Dobry wybór na początek przygody z pizzą.",
+    notes: "Nie chodzi o to, że \"wszystkie dobre pizzerie ją używają\" — po prostu wiele miejsc ją wybiera, bo daje powtarzalny efekt i dobrze współpracuje z krótką lub średnią fermentacją. To mąka typu 00, czyli bardzo drobno zmielona, gładka, bez otrębów. Ma ok. 12,5% białka i siłę W ~260, co sprawia, że jest idealna do ciast fermentowanych przez 12–24 godziny. Daje elastyczne, łatwe do formowania ciasto, które po wypieczeniu — szczególnie w wysokiej temperaturze — ma klasyczny neapolitański wygląd i strukturę. Jeśli szukasz mąki \"bez kombinowania\", która daje spójne efekty, Caputo Pizzeria to dobry punkt odniesienia.",
     image_url: "/images/flours/caputo-pizzeria.jpg",
     slug: "caputo-pizzeria"
   },

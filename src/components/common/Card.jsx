@@ -17,7 +17,7 @@ export default function Card({
   return (
     <CardWrapper
       {...wrapperProps}
-      className={`bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden ${link ? 'block' : ''} ${className}`}
+      className={`bg-white border border-stone-200 hover:border-stone-300 transition overflow-hidden ${link ? 'block' : ''} ${className}`}
     >
       {image && (
         <div className="h-48 bg-gray-200 relative overflow-hidden">

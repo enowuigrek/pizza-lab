@@ -1,11 +1,9 @@
 import { NavLink } from 'react-router-dom';
 
 const navItems = [
-  { path: '/kalkulator', label: 'Kalkulator' },
   { path: '/ciasto', label: 'Ciasto' },
-  { path: '/maki', label: 'Mąki' },
+  { path: '/toppingi', label: 'Toppingi' },
   { path: '/przewodnik', label: 'Przewodnik' },
-  { path: '/skladniki', label: 'Składniki' },
   { path: '/artykuly', label: 'Artykuły' },
 ];
 

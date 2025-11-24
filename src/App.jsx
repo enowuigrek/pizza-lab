@@ -6,6 +6,7 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Calculator from './pages/Calculator';
 import Dough from './pages/Dough';
+import Toppings from './pages/Toppings';
 import FloursList from './pages/flours/FloursList';
 import FlourDetail from './pages/flours/FlourDetail';
 import PizzaGuide from './pages/pizzas/PizzaGuide';
@@ -51,17 +52,20 @@ export default function App() {
           {/* Ciasto (Dough) */}
           <Route path="/ciasto" element={<Dough />} />
 
-          {/* Mąki (Flours) */}
+          {/* Mąki (Flours) - part of Ciasto */}
           <Route path="/maki" element={<FloursList />} />
           <Route path="/maki/:slug" element={<FlourDetail />} />
+
+          {/* Toppingi */}
+          <Route path="/toppingi" element={<Toppings />} />
+
+          {/* Składniki (Ingredients) - part of Toppingi */}
+          <Route path="/skladniki" element={<IngredientsList />} />
+          <Route path="/skladniki/:slug" element={<IngredientDetail />} />
 
           {/* Przewodnik (Pizza Guide) */}
           <Route path="/przewodnik" element={<PizzaGuide />} />
           <Route path="/przewodnik/:slug" element={<PizzaDetail />} />
-
-          {/* Składniki (Ingredients) */}
-          <Route path="/skladniki" element={<IngredientsList />} />
-          <Route path="/skladniki/:slug" element={<IngredientDetail />} />
 
           {/* Artykuły (Articles) */}
           <Route path="/artykuly" element={<ArticlesList />} />
