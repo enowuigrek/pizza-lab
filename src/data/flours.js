@@ -48,10 +48,10 @@ export const flours = [
     type: "00",
     protein_content: 12.5,
     w_strength: 300,
-    description: "Kultowa włoska mąka, alternatywa dla Caputo. Inna filozofia, inny profil smakowy.",
-    ideal_for: ["średnia fermentacja", "neapolitańska", "poolish"],
+    description: "Wysokiej jakości włoska mąka typu 00 stworzona z myślą o autentycznej pizzy neapolitańskiej. Charakteryzuje się stabilnym, elastycznym glutenem oraz wyraźnie \"chlebowym\" profilem aromatycznym. Dobrze znosi pracę na poolishu i fermentacje w przedziale 24-48 godzin.",
+    ideal_for: ["fermentacja średniej długości", "pizza neapolitańska", "zaczyny typu poolish"],
     fermentation_range: "24-48h",
-    notes: "Bardziej chlebowy smak niż Caputo. Świetnie współpracuje z poolish. Dobra elastyczność, łatwa w obróbce.",
+    notes: "Mąka daje elastyczne, sprężyste ciasto, które łatwo się rozciąga i dobrze trzyma kształt. Po wypieczeniu zapewnia strukturę o wyraźnie chlebowym aromacie i miękkim wnętrzu. Sprawdza się przy hydracjach typowych dla neapolitańskiej (58-65%) i lubi fermentację prowadzoną w stabilnych warunkach. Daje powtarzalne rezultaty i jest ceniona za przyjemną pracę z ciastem.",
     image_url: "/images/flours/5stagioni.jpg",
     slug: "5-stagioni-napoletana"
   }
