@@ -141,22 +141,6 @@ export default function IngredientDetail() {
         </section>
       )}
 
-      {/* Related links */}
-      <section className="bg-gray-100 p-6 rounded-lg">
-        <h3 className="font-bold mb-3">Zobacz tez:</h3>
-        <ul className="space-y-2">
-          <li>
-            <Link to="/pizzas" className="text-red-600 hover:underline">
-              Pizze z tym skladnikiem
-            </Link>
-          </li>
-          <li>
-            <Link to="/ingredients" className="text-red-600 hover:underline">
-              Inne skladniki
-            </Link>
-          </li>
-        </ul>
-      </section>
     </div>
   );
 }

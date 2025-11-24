@@ -10,20 +10,6 @@ export default function Home() {
             <div className="w-12 h-12 rounded-full bg-amber-100"></div>
           </div>
           <h1 className="text-5xl md:text-6xl mb-6">Pizza Lab</h1>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link
-              to="/kalkulator"
-              className="bg-red-700 text-white px-8 py-4 hover:bg-red-800 transition"
-            >
-              Kalkulator ciasta
-            </Link>
-            <Link
-              to="/przewodnik"
-              className="border border-stone-600 px-8 py-4 hover:border-white hover:text-white transition text-stone-400"
-            >
-              Przewodnik po pizzach
-            </Link>
-          </div>
         </div>
       </section>
 

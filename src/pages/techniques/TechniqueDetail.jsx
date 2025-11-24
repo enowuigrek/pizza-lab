@@ -163,22 +163,6 @@ export default function TechniqueDetail() {
         })}
       </div>
 
-      {/* Related links */}
-      <section className="mt-12 bg-gray-100 p-6 rounded-lg">
-        <h3 className="font-bold mb-3">Zobacz tez:</h3>
-        <ul className="space-y-2">
-          <li>
-            <Link to="/calculator" className="text-red-600 hover:underline">
-              Kalkulator ciasta
-            </Link>
-          </li>
-          <li>
-            <Link to="/flours" className="text-red-600 hover:underline">
-              Dobierz make
-            </Link>
-          </li>
-        </ul>
-      </section>
     </div>
   );
 }

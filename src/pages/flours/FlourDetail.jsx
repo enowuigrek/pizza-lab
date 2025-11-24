@@ -86,27 +86,6 @@ export default function FlourDetail() {
         <p className="text-stone-700">{flour.notes}</p>
       </section>
 
-      {/* Related links */}
-      <section className="bg-stone-100 border border-stone-200 p-6">
-        <h3 className="font-semibold mb-4">Zobacz też</h3>
-        <ul className="space-y-2">
-          <li>
-            <Link to="/kalkulator" className="text-red-700 hover:text-red-800 transition">
-              Oblicz ciasto z tą mąką
-            </Link>
-          </li>
-          <li>
-            <Link to="/ciasto" className="text-red-700 hover:text-red-800 transition">
-              Techniki fermentacji
-            </Link>
-          </li>
-          <li>
-            <Link to="/maki" className="text-red-700 hover:text-red-800 transition">
-              Porównaj z innymi mąkami
-            </Link>
-          </li>
-        </ul>
-      </section>
     </div>
   );
 }
