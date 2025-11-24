@@ -25,17 +25,17 @@ export default function FloursList() {
       </p>
 
       {/* Collapsible: Tipo vs Typ */}
-      <section className="bg-stone-50 border border-stone-200 mb-6">
+      <section className="mb-6">
         <button
           onClick={() => setTipoVsTypExpanded(!tipoVsTypExpanded)}
-          className="w-full p-6 text-left flex items-center justify-between hover:bg-stone-100 transition focus:outline-none"
+          className="w-full p-6 text-left flex items-center justify-between bg-stone-50 border border-stone-200 hover:bg-stone-100 transition focus:outline-none"
         >
           <h2 className="text-2xl">Włoskie „Tipo" vs Polskie „Typ" — skąd ten bałagan?</h2>
           <span className="text-2xl">{tipoVsTypExpanded ? '▴' : '▾'}</span>
         </button>
 
         {tipoVsTypExpanded && (
-          <div className="px-6 pb-6">
+          <div className="bg-stone-50 px-6 py-6">
             <p className="text-stone-700 mb-6">
               To jest coś, co regularnie wprowadza ludzi w błąd. W Polsce patrzymy na mąkę 450, 550, 750…,
               a we Włoszech na Tipo 00, 0, 1, 2 — i większość myśli, że to ten sam system.
@@ -45,7 +45,7 @@ export default function FloursList() {
             <div className="grid md:grid-cols-2 gap-8">
               {/* Włochy */}
               <div>
-                <h3 className="font-semibold text-lg mb-4 text-red-800">🇮🇹 Włochy – „Tipo" = stopień przemiału</h3>
+                <h3 className="font-semibold text-lg mb-4 text-stone-800">🇮🇹 Włochy – „Tipo" = stopień przemiału</h3>
 
                 <div className="mb-4">
                   <h4 className="font-semibold mb-2">Tipo 00</h4>
@@ -74,7 +74,7 @@ export default function FloursList() {
 
               {/* Polska */}
               <div>
-                <h3 className="font-semibold text-lg mb-4 text-red-800">🇵🇱 Polska – „Typ" = zawartość popiołu (minerałów)</h3>
+                <h3 className="font-semibold text-lg mb-4 text-stone-800">🇵🇱 Polska – „Typ" = zawartość popiołu (minerałów)</h3>
 
                 <div className="mb-4">
                   <p className="text-sm text-stone-600 mb-3">Np.:</p>
@@ -141,20 +141,20 @@ export default function FloursList() {
       </section>
 
       {/* Collapsible: Jak czytać parametry mąki */}
-      <section className="bg-stone-50 border border-stone-200 mb-12">
+      <section className="mb-12">
         <button
           onClick={() => setParametersExpanded(!parametersExpanded)}
-          className="w-full p-6 text-left flex items-center justify-between hover:bg-stone-100 transition focus:outline-none"
+          className="w-full p-6 text-left flex items-center justify-between bg-stone-50 border border-stone-200 hover:bg-stone-100 transition focus:outline-none"
         >
           <h2 className="text-2xl">Jak czytać parametry mąki</h2>
           <span className="text-2xl">{parametersExpanded ? '▴' : '▾'}</span>
         </button>
 
         {parametersExpanded && (
-          <div className="px-6 pb-6">
+          <div className="bg-stone-50 px-6 py-6">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-semibold text-lg mb-3 text-red-800">Wartość W (siła mąki)</h3>
+                <h3 className="font-semibold text-lg mb-3 text-stone-800">Wartość W (siła mąki)</h3>
                 <p className="text-stone-600 mb-4">
                   W oznacza siłę glutenu mierzoną w alweografie. Im wyższa wartość, tym mocniejszy gluten
                   i dłuższy możliwy czas fermentacji.
@@ -180,7 +180,7 @@ export default function FloursList() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-lg mb-3 text-red-800">Zawartość białka</h3>
+                <h3 className="font-semibold text-lg mb-3 text-stone-800">Zawartość białka</h3>
                 <p className="text-stone-600 mb-4">
                   Procent białka wpływa na elastyczność ciasta. Więcej białka = więcej glutenu.
                   Dla pizzy neapolitańskiej optymalne jest 11-13%.
@@ -202,7 +202,7 @@ export default function FloursList() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-lg mb-3 text-red-800">Typ mąki (00, 0, 1, 2)</h3>
+                <h3 className="font-semibold text-lg mb-3 text-stone-800">Typ mąki (00, 0, 1, 2)</h3>
                 <p className="text-stone-600 mb-4">
                   Włoski system typów określa stopień przemiału. Typ 00 to najdrobniej zmielona mąka,
                   dająca gładkie, elastyczne ciasto.
@@ -224,7 +224,7 @@ export default function FloursList() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-lg mb-3 text-red-800">Czas fermentacji</h3>
+                <h3 className="font-semibold text-lg mb-3 text-stone-800">Czas fermentacji</h3>
                 <p className="text-stone-600 mb-4">
                   Dopasuj mąkę do planowanego czasu fermentacji. Słaba mąka przy długiej fermentacji
                   straci strukturę. Mocna przy krótkiej będzie gumowata.
