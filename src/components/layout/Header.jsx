@@ -8,13 +8,13 @@ export default function Header() {
   return (
     <header className="bg-stone-900 text-white sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-8 h-8 rounded-full bg-red-700 flex items-center justify-center">
               <div className="w-5 h-5 rounded-full bg-amber-100"></div>
             </div>
-            <span className="text-lg font-semibold tracking-wide">Pizza Lab</span>
+            <span className="text-xl font-serif tracking-wide">Pizza Lab</span>
           </Link>
 
           {/* Desktop Navigation */}

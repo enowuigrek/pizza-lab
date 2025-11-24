@@ -5,10 +5,14 @@ import Footer from './components/layout/Footer';
 // Pages
 import Home from './pages/Home';
 import Calculator from './pages/Calculator';
+import CiastoOverview from './pages/ciasto/CiastoOverview';
+import StyleCiasta from './pages/ciasto/StyleCiasta';
 import Dough from './pages/Dough';
 import Toppings from './pages/Toppings';
 import FloursList from './pages/flours/FloursList';
 import FlourDetail from './pages/flours/FlourDetail';
+import KlasycznePizze from './pages/KlasycznePizze';
+import MojeWariacje from './pages/MojeWariacje';
 import PizzaGuide from './pages/pizzas/PizzaGuide';
 import PizzaDetail from './pages/pizzas/PizzaDetail';
 import IngredientsList from './pages/ingredients/IngredientsList';
@@ -49,23 +53,35 @@ export default function App() {
           {/* Kalkulator */}
           <Route path="/kalkulator" element={<Calculator />} />
 
-          {/* Ciasto (Dough) */}
-          <Route path="/ciasto" element={<Dough />} />
+          {/* Ciasto */}
+          <Route path="/ciasto" element={<CiastoOverview />} />
+          <Route path="/ciasto/style" element={<StyleCiasta />} />
+          <Route path="/ciasto/zaczyny" element={<Dough />} />
+          <Route path="/ciasto/fermentacja" element={<Dough />} />
+          <Route path="/ciasto/techniki" element={<Dough />} />
+          <Route path="/ciasto/hydratacja" element={<Dough />} />
+          <Route path="/ciasto/drozdze" element={<Dough />} />
 
           {/* Mąki (Flours) - part of Ciasto */}
           <Route path="/maki" element={<FloursList />} />
           <Route path="/maki/:slug" element={<FlourDetail />} />
 
-          {/* Toppingi */}
-          <Route path="/toppingi" element={<Toppings />} />
+          {/* Składniki */}
+          <Route path="/skladniki" element={<Toppings />} />
+          <Route path="/skladniki/:category" element={<IngredientsList />} />
+          <Route path="/skladniki/:category/:slug" element={<IngredientDetail />} />
 
-          {/* Składniki (Ingredients) - part of Toppingi */}
-          <Route path="/skladniki" element={<IngredientsList />} />
-          <Route path="/skladniki/:slug" element={<IngredientDetail />} />
+          {/* Klasyczne Pizze */}
+          <Route path="/klasyczne-pizze" element={<KlasycznePizze />} />
+          <Route path="/klasyczne-pizze/:slug" element={<PizzaDetail />} />
 
-          {/* Przewodnik (Pizza Guide) */}
-          <Route path="/przewodnik" element={<PizzaGuide />} />
+          {/* Moje Wariacje */}
+          <Route path="/moje-wariacje" element={<MojeWariacje />} />
+
+          {/* Legacy routes - redirects */}
+          <Route path="/przewodnik" element={<KlasycznePizze />} />
           <Route path="/przewodnik/:slug" element={<PizzaDetail />} />
+          <Route path="/toppingi" element={<Toppings />} />
 
           {/* Artykuły (Articles) */}
           <Route path="/artykuly" element={<ArticlesList />} />

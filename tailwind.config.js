@@ -11,6 +11,10 @@ export default {
           red: '#DC2626',
           cream: '#FFFBEB',
         }
+      },
+      fontFamily: {
+        serif: ['Playfair Display', 'serif'],
+        sans: ['Source Sans 3', 'sans-serif'],
       }
     },
   },

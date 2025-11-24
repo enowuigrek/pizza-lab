@@ -36,7 +36,7 @@ export default function Home() {
       {/* Quick Links */}
       <section className="py-20 bg-stone-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl text-center mb-12">Odkryj</h2>
+          <h2 className="text-3xl text-center mb-12">Eksploruj wiedzę</h2>
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <Link
               to="/kalkulator"
@@ -80,47 +80,73 @@ export default function Home() {
       {/* Featured content */}
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-3xl mb-12">Zacznij tutaj</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <h2 className="text-3xl mb-6">Komponujemy pizze</h2>
+          <p className="text-lg text-stone-600 mb-12 max-w-3xl">
+            Stworzenie idealnej pizzy to proces, który wymaga zrozumienia każdego elementu.
+            Przejdź przez pełną ścieżkę — od wyboru stylu ciasta, przez dobór składników, po klasyczne recepty i autorskie wariacje.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
             <Link
-              to="/ciasto"
+              to="/ciasto/style"
               className="group"
             >
               <div className="aspect-video bg-stone-100 border border-stone-200 mb-4 flex items-center justify-center group-hover:border-red-700 transition">
                 <div className="w-16 h-16 rounded-full bg-red-700 opacity-20"></div>
               </div>
-              <h3 className="text-xl mb-2 group-hover:text-red-700 transition">Przygotowanie ciasta</h3>
-              <p className="text-stone-500">Poznaj poolish, bigę i metody fermentacji, które nadają pizzy głębi smakowej.</p>
+              <div className="text-sm text-stone-400 mb-1">Krok 1</div>
+              <h3 className="text-xl mb-2 group-hover:text-red-700 transition">Wybierz styl ciasta</h3>
+              <p className="text-stone-500">Napoletana, New York, Romana — każdy styl ma swoją historię i charakter.</p>
             </Link>
 
             <Link
-              to="/przewodnik/margherita"
+              to="/kalkulator"
+              className="group"
+            >
+              <div className="aspect-video bg-stone-100 border border-stone-200 mb-4 flex items-center justify-center group-hover:border-red-700 transition">
+                <div className="w-16 h-16 rounded-full bg-amber-700 opacity-20"></div>
+              </div>
+              <div className="text-sm text-stone-400 mb-1">Krok 2</div>
+              <h3 className="text-xl mb-2 group-hover:text-red-700 transition">Oblicz proporcje</h3>
+              <p className="text-stone-500">Użyj kalkulatora, by precyzyjnie określić ilości mąki, wody, drożdży i soli.</p>
+            </Link>
+
+            <Link
+              to="/skladniki"
               className="group"
             >
               <div className="aspect-video bg-stone-100 border border-stone-200 mb-4 flex items-center justify-center group-hover:border-red-700 transition">
                 <div className="w-16 h-16 rounded-full bg-green-700 opacity-20"></div>
               </div>
-              <h3 className="text-xl mb-2 group-hover:text-red-700 transition">Margherita - punkt odniesienia</h3>
-              <p className="text-stone-500">Najprostsza pizza, ale najtrudniejsza do perfekcji. Poznaj autentyczny przepis.</p>
+              <div className="text-sm text-stone-400 mb-1">Krok 3</div>
+              <h3 className="text-xl mb-2 group-hover:text-red-700 transition">Dobierz składniki</h3>
+              <p className="text-stone-500">Sery, pomidory, mięsa — poznaj autentyczne składniki i ich zastosowanie.</p>
+            </Link>
+          </div>
+
+          <div className="mt-12 grid md:grid-cols-2 gap-8">
+            <Link
+              to="/klasyczne-pizze"
+              className="bg-stone-100 border border-stone-200 p-8 hover:border-red-700 transition group"
+            >
+              <h3 className="text-2xl mb-3 group-hover:text-red-700 transition">Klasyczne pizze</h3>
+              <p className="text-stone-600">
+                Margherita, Marinara, Diavola — poznaj autentyczne włoskie recepty z linkowanymi składnikami i technikami.
+              </p>
+            </Link>
+
+            <Link
+              to="/moje-wariacje"
+              className="bg-stone-100 border border-stone-200 p-8 hover:border-red-700 transition group"
+            >
+              <h3 className="text-2xl mb-3 group-hover:text-red-700 transition">Moje wariacje</h3>
+              <p className="text-stone-600">
+                Autorskie przepisy łączące klasykę z kreatywnością. Każdy z odnośnikami do technik i składników.
+              </p>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* About */}
-      <section className="py-20 bg-stone-100">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-3xl mb-6">O Pizza Lab</h2>
-          <p className="text-stone-600 text-lg leading-relaxed mb-4">
-            Pizza Lab to polska platforma wiedzy o pizzy. Dokumentujemy różnice między
-            autentycznymi włoskimi recepturami a lokalnymi adaptacjami.
-          </p>
-          <p className="text-stone-500">
-            Każdy przepis, każda technika, każdy test - rzeczowo i bez oceniania.
-            Bo dobra pizza to wiedza i praktyka.
-          </p>
-        </div>
-      </section>
     </div>
   );
 }

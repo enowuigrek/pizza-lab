@@ -35,11 +35,11 @@ export default function Toppings() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl mb-4">Toppingi</h1>
-      <p className="text-stone-600 mb-12 max-w-2xl">
-        Przewodnik po składnikach do pizzy. Poznaj autentyczne toppingi, ich zastosowanie
-        i gdzie je kupić w Polsce.
+    <div className="container mx-auto px-4 py-12 max-w-5xl">
+      <h1 className="text-5xl mb-6">Składniki</h1>
+      <p className="text-lg text-stone-600 mb-12 max-w-3xl leading-relaxed">
+        Przewodnik po składnikach do pizzy. Poznaj autentyczne włoskie produkty, ich charakterystykę
+        i zastosowanie w różnych stylach pizzy.
       </p>
 
       {/* Info */}
@@ -99,29 +99,6 @@ export default function Toppings() {
           >
             Przeczytaj artykuły →
           </Link>
-        </div>
-      </div>
-
-      {/* Tips */}
-      <div className="mt-12 bg-stone-100 border border-stone-200 p-8">
-        <h3 className="text-xl mb-4">Gdzie kupować składniki?</h3>
-        <div className="grid md:grid-cols-2 gap-6 text-sm">
-          <div>
-            <h4 className="font-semibold mb-2">Sklepy online</h4>
-            <ul className="space-y-1 text-stone-600">
-              <li>• Jak u Mammy</li>
-              <li>• Casa Italiana</li>
-              <li>• Italian Market</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-2">Sklepy stacjonarne</h4>
-            <ul className="space-y-1 text-stone-600">
-              <li>• Włoskie delikatesy lokalne</li>
-              <li>• Carrefour - dział międzynarodowy</li>
-              <li>• Auchan - sekcja włoska</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
