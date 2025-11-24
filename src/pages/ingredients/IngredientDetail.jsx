@@ -5,6 +5,7 @@ const ingredientsData = {
     name: 'Mozzarella di Bufala',
     category: 'sery',
     description: 'Premium mozzarella z mleka bawolow wodnych. Kremowa, delikatna, niesamowita.',
+    image_url: '/images/ingredients/mozzarella-bufala.jpg',
     content: `
 ## Co to jest Mozzarella di Bufala?
 
@@ -45,6 +46,7 @@ Mozzarella di Bufala to ser z mleka bawolow wodnych, produkowany glownie w regio
     name: 'Salame Piccante',
     category: 'mieso',
     description: 'Wloskie pikantne salami. Podstawa autentycznej pizzy Diavola.',
+    image_url: '/images/ingredients/salame-piccante.jpg',
     content: `
 ## Co to jest Salame Piccante?
 
@@ -101,8 +103,27 @@ export default function IngredientDetail() {
         <span className="text-gray-600">{ingredient.name}</span>
       </nav>
 
-      <h1 className="text-4xl font-bold mb-4">{ingredient.name}</h1>
-      <p className="text-xl text-gray-600 mb-8">{ingredient.description}</p>
+      {/* Header with image */}
+      <div className="flex flex-col md:flex-row gap-8 mb-8">
+        {ingredient.image_url && (
+          <div className="md:w-1/3">
+            <div className="bg-stone-100 border border-stone-200 aspect-square flex items-center justify-center overflow-hidden">
+              <img
+                src={ingredient.image_url}
+                alt={ingredient.name}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                }}
+              />
+            </div>
+          </div>
+        )}
+        <div className={ingredient.image_url ? 'md:w-2/3' : 'w-full'}>
+          <h1 className="text-4xl font-bold mb-4">{ingredient.name}</h1>
+          <p className="text-xl text-gray-600 mb-4">{ingredient.description}</p>
+        </div>
+      </div>
 
       {/* Content */}
       <div className="prose max-w-none mb-8">

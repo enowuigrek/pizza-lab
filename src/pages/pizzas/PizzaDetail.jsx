@@ -31,11 +31,23 @@ export default function PizzaDetail() {
         <p className="text-lg text-stone-600 leading-relaxed">{pizza.description}</p>
       </header>
 
-      {/* Image placeholder */}
-      <div className="mb-10 aspect-video bg-stone-100 border border-stone-200 flex items-center justify-center">
-        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
-          <div className="w-16 h-16 rounded-full bg-red-700 opacity-80"></div>
-        </div>
+      {/* Image */}
+      <div className="mb-10 aspect-video bg-stone-100 border border-stone-200 flex items-center justify-center overflow-hidden">
+        {pizza.image_url ? (
+          <img
+            src={pizza.image_url}
+            alt={pizza.name}
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.parentElement.innerHTML = '<div class="w-24 h-24 rounded-full bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-red-700 opacity-80"></div></div>';
+            }}
+          />
+        ) : (
+          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-red-700 opacity-80"></div>
+          </div>
+        )}
       </div>
 
       {/* Styl ciasta */}
