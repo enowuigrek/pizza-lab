@@ -39,8 +39,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/przewodnik" className="hover:text-white transition">
-                  Przewodnik po pizzach
+                <Link to="/klasyczne-pizze" className="hover:text-white transition">
+                  Klasyczne pizze
                 </Link>
               </li>
             </ul>

@@ -83,7 +83,7 @@ export default function KlasycznePizze() {
         {classicPizzas.map((pizza) => (
           <article
             key={pizza.slug}
-            className="bg-white border border-stone-200 hover:border-red-700 transition group"
+            className="bg-white border border-stone-200 hover:border-red-700 transition group border-l-4 border-l-red-700"
           >
             <div className="p-6">
               <div className="flex items-center gap-3 mb-3">

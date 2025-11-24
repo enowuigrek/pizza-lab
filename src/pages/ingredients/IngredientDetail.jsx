@@ -126,21 +126,6 @@ export default function IngredientDetail() {
         })}
       </div>
 
-      {/* Where to buy */}
-      {ingredient.whereToBuy && (
-        <section className="bg-green-50 p-6 rounded-lg mb-8">
-          <h3 className="font-bold text-lg mb-3">Gdzie kupic?</h3>
-          <ul className="space-y-2">
-            {ingredient.whereToBuy.map((place, idx) => (
-              <li key={idx} className="flex items-center">
-                <span className="text-green-600 mr-2">✓</span>
-                {place}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
     </div>
   );
 }

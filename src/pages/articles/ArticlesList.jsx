@@ -82,24 +82,6 @@ export default function ArticlesList() {
           ))}
         </div>
       </section>
-
-      {/* Newsletter CTA */}
-      <div className="mt-12 bg-red-50 p-6 rounded-lg text-center">
-        <h3 className="font-bold text-lg mb-2">Chcesz wiedziec o nowych artykulach?</h3>
-        <p className="text-gray-600 mb-4">
-          Wkrotce uruchomimy newsletter. Zostaw email, a powiadomimy Cie o nowych tresciach.
-        </p>
-        <div className="flex gap-2 max-w-md mx-auto">
-          <input
-            type="email"
-            placeholder="twoj@email.com"
-            className="flex-1 px-4 py-2 border rounded-lg"
-          />
-          <button className="bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700">
-            Zapisz sie
-          </button>
-        </div>
-      </div>
     </div>
   );
 }

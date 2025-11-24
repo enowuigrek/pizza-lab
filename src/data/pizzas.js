@@ -4,6 +4,8 @@ export const pizzas = [
     name: "Margherita",
     slug: "margherita",
     description: "Klasyczna pizza neapolitańska stworzona w 1889 roku dla królowej Margherity di Savoia. Kolory składników nawiązują do włoskiej flagi: czerwony (pomidor), biały (mozzarella), zielony (bazylia). To punkt odniesienia dla wszystkich pizz - prosta, ale wymagająca precyzji.",
+    style: "napoletana",
+    styleName: "Napoletana",
     authentic: {
       ingredients: [
         { name: "pomidory (passata lub pelati)", required: true },
@@ -51,6 +53,8 @@ export const pizzas = [
     name: "Diavola",
     slug: "diavola",
     description: "Pizza z pikantnym włoskim salami. Nazwa pochodzi od 'diavolo' (diabeł), nawiązując do ostrości. Podstawą jest pomidor, mozzarella i salame piccante - tradycyjne włoskie pikantne salami.",
+    style: "napoletana",
+    styleName: "Napoletana / Romana",
     authentic: {
       ingredients: [
         { name: "pomidory", required: true },
@@ -96,6 +100,8 @@ export const pizzas = [
     name: "Capricciosa",
     slug: "capricciosa",
     description: "Capricciosa to jedna z najbardziej rozpoznawalnych pizz we Włoszech i w Polsce. U nas najczęściej kojarzy się jedynie z szynką i pieczarkami, ale klasyczna wersja jest bogatsza i ma kilka składników, bez których traci swój charakter.",
+    style: "romana-tonda",
+    styleName: "Romana Tonda",
     authentic: {
       ingredients: [
         { name: "pomidory", required: true },
@@ -145,6 +151,8 @@ export const pizzas = [
     name: "Marinara",
     slug: "marinara",
     description: "Najstarsza pizza neapolitańska - prostsza nawet od Margherity. Nie zawiera sera, tylko pomidory, czosnek, oregano i oliwę. Nazwa pochodzi od marynarzy (marinai), którzy ją jedli.",
+    style: "napoletana",
+    styleName: "Napoletana",
     authentic: {
       ingredients: [
         { name: "pomidory", required: true },
@@ -192,6 +200,8 @@ export const pizzas = [
     name: "Quattro Formaggi",
     slug: "quattro-formaggi",
     description: "Pizza z czterema serami. Klasyczny zestaw to mozzarella, gorgonzola, fontina (lub taleggio) i parmezan. Może być bianca (bez pomidora) lub rossa (z pomidorem).",
+    style: "napoletana",
+    styleName: "Romana / Napoletana",
     authentic: {
       ingredients: [
         { name: "mozzarella", required: true },

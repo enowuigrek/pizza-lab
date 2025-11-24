@@ -9,8 +9,8 @@ export default function PizzaDetail() {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-2xl font-bold mb-4">Pizza nie znaleziona</h1>
-        <Link to="/przewodnik" className="text-red-700 hover:underline">
-          Wróć do przewodnika
+        <Link to="/klasyczne-pizze" className="text-red-700 hover:underline">
+          Wróć do klasycznych pizz
         </Link>
       </div>
     );
@@ -20,7 +20,7 @@ export default function PizzaDetail() {
     <div className="container mx-auto px-4 py-12 max-w-3xl">
       {/* Breadcrumb */}
       <nav className="text-sm mb-8 text-stone-500">
-        <Link to="/przewodnik" className="hover:text-red-700 transition">Przewodnik</Link>
+        <Link to="/klasyczne-pizze" className="hover:text-red-700 transition">Klasyczne pizze</Link>
         <span className="mx-2">/</span>
         <span className="text-stone-900">{pizza.name}</span>
       </nav>
@@ -37,6 +37,20 @@ export default function PizzaDetail() {
           <div className="w-16 h-16 rounded-full bg-red-700 opacity-80"></div>
         </div>
       </div>
+
+      {/* Styl ciasta */}
+      {pizza.styleName && (
+        <section className="mb-8 info-section info-section--neutral">
+          <h2 className="text-2xl mb-4">Styl ciasta</h2>
+          <Link
+            to={`/ciasto/style#${pizza.style}`}
+            className="text-red-700 hover:underline font-semibold text-lg"
+          >
+            {pizza.styleName}
+          </Link>
+          <p className="text-stone-600 text-sm mt-2">Kliknij, aby poznać szczegóły tego stylu ciasta</p>
+        </section>
+      )}
 
       {/* Authentic Ingredients */}
       <section className="mb-8 info-section info-section--positive">

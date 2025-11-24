@@ -65,11 +65,11 @@ export default function Home() {
             </Link>
 
             <Link
-              to="/przewodnik"
+              to="/klasyczne-pizze"
               className="bg-white p-8 border border-stone-200 hover:border-red-700 transition text-center group"
             >
               <div className="w-12 h-12 rounded-full bg-stone-100 mx-auto mb-4 group-hover:bg-red-50 transition"></div>
-              <h3 className="font-semibold mb-2">Przewodnik</h3>
+              <h3 className="font-semibold mb-2">Klasyczne pizze</h3>
               <p className="text-stone-500 text-sm">Autentyczne definicje pizz</p>
             </Link>
           </div>
