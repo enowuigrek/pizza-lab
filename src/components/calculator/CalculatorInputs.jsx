@@ -12,6 +12,92 @@ export default function CalculatorInputs({
 }) {
   return (
     <div className="bg-white border border-stone-200 p-6 mb-6">
+      {/* Preferment checkbox - first option */}
+      <section className="mb-6 pb-6 border-b border-stone-200">
+        <label className="flex items-center cursor-pointer">
+          <input
+            type="checkbox"
+            checked={usePreferment}
+            onChange={(e) => onUsePrefermentChange(e.target.checked)}
+            className="w-5 h-5 accent-red-700 mr-3"
+          />
+          <span className="font-medium text-lg">Użyj zaczynu (poolish/biga)</span>
+        </label>
+      </section>
+
+      {/* Preferment settings (only when checkbox is checked) */}
+      {usePreferment && (
+        <section className="mb-6 bg-amber-50 border border-amber-200 p-4">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-semibold">Zaczyn</h2>
+            <Link
+              to="/ciasto"
+              className="text-sm text-red-700 hover:text-red-800 transition"
+              target="_blank"
+            >
+              Co to są zaczyny? →
+            </Link>
+          </div>
+
+          {/* Method selection */}
+          <div className="mb-4">
+            <label className="block font-medium mb-2">Typ zaczynu</label>
+            <div className="flex gap-2">
+              <button
+                onClick={() => onMethodChange('poolish')}
+                className={`flex-1 px-4 py-2 border transition ${
+                  method === 'poolish'
+                    ? 'bg-red-700 text-white border-red-700'
+                    : 'bg-white border-stone-300 hover:bg-stone-50'
+                }`}
+              >
+                Poolish
+              </button>
+              <button
+                onClick={() => onMethodChange('biga')}
+                className={`flex-1 px-4 py-2 border transition ${
+                  method === 'biga'
+                    ? 'bg-red-700 text-white border-red-700'
+                    : 'bg-white border-stone-300 hover:bg-stone-50'
+                }`}
+              >
+                Biga
+              </button>
+            </div>
+          </div>
+
+          {/* Preferment percentage */}
+          <div className="mb-4">
+            <label className="block font-medium mb-2">
+              % mąki w zaczynie: {inputs.prefermentPercentage}%
+            </label>
+            <div className="flex items-center gap-2 mb-2">
+              <input
+                type="range"
+                min="20"
+                max="100"
+                step="5"
+                value={inputs.prefermentPercentage}
+                onChange={(e) => onInputChange('prefermentPercentage', parseInt(e.target.value))}
+                className="flex-1 accent-red-700"
+              />
+              <input
+                type="number"
+                min="20"
+                max="100"
+                value={inputs.prefermentPercentage}
+                onChange={(e) => onInputChange('prefermentPercentage', parseInt(e.target.value) || 50)}
+                className="w-16 border border-stone-300 px-2 py-1 text-sm"
+                placeholder="%"
+              />
+            </div>
+            <p className="text-sm text-stone-600">
+              20-30% = subtelny smak, 50% = standard, 70-100% = intensywny smak zakwasu
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* Basic Inputs */}
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-4">Podstawowe</h2>
@@ -119,93 +205,7 @@ export default function CalculatorInputs({
             className="w-full accent-red-700"
           />
         </div>
-
-        {/* Use preferment checkbox */}
-        <div className="mb-4">
-          <label className="flex items-center cursor-pointer">
-            <input
-              type="checkbox"
-              checked={usePreferment}
-              onChange={(e) => onUsePrefermentChange(e.target.checked)}
-              className="w-5 h-5 accent-red-700 mr-3"
-            />
-            <span className="font-medium">Użyj zaczynu (poolish/biga)</span>
-          </label>
-        </div>
       </section>
-
-      {/* Preferment settings (only when checkbox is checked) */}
-      {usePreferment && (
-        <section className="mb-6 bg-amber-50 border border-amber-200 p-4">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Zaczyn</h2>
-            <Link
-              to="/ciasto"
-              className="text-sm text-red-700 hover:text-red-800 transition"
-              target="_blank"
-            >
-              Co to są zaczyny? →
-            </Link>
-          </div>
-
-          {/* Method selection */}
-          <div className="mb-4">
-            <label className="block font-medium mb-2">Typ zaczynu</label>
-            <div className="flex gap-2">
-              <button
-                onClick={() => onMethodChange('poolish')}
-                className={`flex-1 px-4 py-2 border transition ${
-                  method === 'poolish'
-                    ? 'bg-red-700 text-white border-red-700'
-                    : 'bg-white border-stone-300 hover:bg-stone-50'
-                }`}
-              >
-                Poolish
-              </button>
-              <button
-                onClick={() => onMethodChange('biga')}
-                className={`flex-1 px-4 py-2 border transition ${
-                  method === 'biga'
-                    ? 'bg-red-700 text-white border-red-700'
-                    : 'bg-white border-stone-300 hover:bg-stone-50'
-                }`}
-              >
-                Biga
-              </button>
-            </div>
-          </div>
-
-          {/* Preferment percentage */}
-          <div className="mb-4">
-            <label className="block font-medium mb-2">
-              % mąki w zaczynie: {inputs.prefermentPercentage}%
-            </label>
-            <div className="flex items-center gap-2 mb-2">
-              <input
-                type="range"
-                min="20"
-                max="100"
-                step="5"
-                value={inputs.prefermentPercentage}
-                onChange={(e) => onInputChange('prefermentPercentage', parseInt(e.target.value))}
-                className="flex-1 accent-red-700"
-              />
-              <input
-                type="number"
-                min="20"
-                max="100"
-                value={inputs.prefermentPercentage}
-                onChange={(e) => onInputChange('prefermentPercentage', parseInt(e.target.value) || 50)}
-                className="w-16 border border-stone-300 px-2 py-1 text-sm"
-                placeholder="%"
-              />
-            </div>
-            <p className="text-sm text-stone-600">
-              20-30% = subtelny smak, 50% = standard, 70-100% = intensywny smak zakwasu
-            </p>
-          </div>
-        </section>
-      )}
 
       {/* Fermentation settings - 3 tiles */}
       <section className="mb-6">
