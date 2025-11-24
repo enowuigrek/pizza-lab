@@ -45,13 +45,6 @@ export default function Navigation({ mobile = false, onItemClick }) {
           </button>
           {openMenu === 'ciasto' && (
             <div className="pl-6 space-y-1 py-2">
-              <NavLink
-                to="/ciasto"
-                onClick={onItemClick}
-                className="block py-1 px-3 text-sm text-stone-300 hover:text-white transition"
-              >
-                Przegląd
-              </NavLink>
               {doughSubItems.map((item) => (
                 <NavLink
                   key={item.path}
@@ -84,13 +77,6 @@ export default function Navigation({ mobile = false, onItemClick }) {
           </button>
           {openMenu === 'skladniki' && (
             <div className="pl-6 space-y-1 py-2">
-              <NavLink
-                to="/skladniki"
-                onClick={onItemClick}
-                className="block py-1 px-3 text-sm text-stone-300 hover:text-white transition"
-              >
-                Przegląd
-              </NavLink>
               {ingredientsSubItems.map((item) => (
                 <NavLink
                   key={item.path}
@@ -133,6 +119,15 @@ export default function Navigation({ mobile = false, onItemClick }) {
         >
           Artykuły
         </NavLink>
+        <NavLink
+          to="/o-mnie"
+          onClick={onItemClick}
+          className={({ isActive }) =>
+            `block py-2 px-3 hover:bg-stone-800 transition ${isActive ? 'bg-stone-800' : ''}`
+          }
+        >
+          O mnie
+        </NavLink>
       </nav>
     );
   }
@@ -159,13 +154,6 @@ export default function Navigation({ mobile = false, onItemClick }) {
         {/* Mega menu dropdown */}
         {openMenu === 'ciasto' && (
           <div className="absolute left-0 top-full mt-0 bg-stone-800 border border-stone-700 min-w-[240px] py-2 shadow-xl">
-            <Link
-              to="/ciasto"
-              className="block px-4 py-2 text-sm hover:bg-stone-700 transition text-stone-300 hover:text-white"
-            >
-              Przegląd
-            </Link>
-            <div className="border-t border-stone-700 my-2"></div>
             {doughSubItems.map((item) => (
               <Link
                 key={item.path}
@@ -198,13 +186,6 @@ export default function Navigation({ mobile = false, onItemClick }) {
         {/* Mega menu dropdown */}
         {openMenu === 'skladniki' && (
           <div className="absolute left-0 top-full mt-0 bg-stone-800 border border-stone-700 min-w-[240px] py-2 shadow-xl">
-            <Link
-              to="/skladniki"
-              className="block px-4 py-2 text-sm hover:bg-stone-700 transition text-stone-300 hover:text-white"
-            >
-              Przegląd
-            </Link>
-            <div className="border-t border-stone-700 my-2"></div>
             {ingredientsSubItems.map((item) => (
               <Link
                 key={item.path}
@@ -242,6 +223,14 @@ export default function Navigation({ mobile = false, onItemClick }) {
         }
       >
         Artykuły
+      </NavLink>
+      <NavLink
+        to="/o-mnie"
+        className={({ isActive }) =>
+          `px-4 py-2 text-sm tracking-wide hover:text-red-400 transition ${isActive ? 'text-red-400' : ''}`
+        }
+      >
+        O mnie
       </NavLink>
     </nav>
   );

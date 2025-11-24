@@ -54,21 +54,6 @@ export default function Dough() {
         </p>
       </header>
 
-      {/* Quick links */}
-      <div className="flex gap-4 mb-12">
-        <Link
-          to="/kalkulator"
-          className="px-4 py-2 bg-red-700 text-white hover:bg-red-800 transition"
-        >
-          Kalkulator proporcji
-        </Link>
-        <Link
-          to="/maki"
-          className="px-4 py-2 border border-stone-300 hover:border-red-700 hover:text-red-700 transition"
-        >
-          Dobierz mąkę
-        </Link>
-      </div>
 
       {/* What are starters */}
       <section className="mb-12">
@@ -192,26 +177,6 @@ export default function Dough() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="border-t border-stone-200 pt-8">
-        <h3 className="font-semibold mb-4 text-stone-500 uppercase text-sm tracking-wide">
-          Następne kroki
-        </h3>
-        <div className="flex flex-wrap gap-4">
-          <Link
-            to="/kalkulator"
-            className="px-4 py-2 bg-red-700 text-white hover:bg-red-800 transition"
-          >
-            Oblicz proporcje ciasta
-          </Link>
-          <Link
-            to="/maki"
-            className="px-4 py-2 border border-stone-300 hover:border-red-700 hover:text-red-700 transition"
-          >
-            Poznaj mąki
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

@@ -117,26 +117,12 @@ export default function KlasycznePizze() {
                 <p className="text-sm font-semibold">{pizza.style}</p>
               </div>
 
-              <div className="flex flex-wrap gap-2">
-                <Link
-                  to={`/klasyczne-pizze/${pizza.slug}`}
-                  className="text-sm px-4 py-2 bg-red-700 text-white hover:bg-red-800 transition"
-                >
-                  Zobacz przepis
-                </Link>
-                <Link
-                  to="/skladniki"
-                  className="text-sm px-4 py-2 border border-stone-300 hover:border-red-700 hover:text-red-700 transition"
-                >
-                  Składniki
-                </Link>
-                <Link
-                  to="/ciasto"
-                  className="text-sm px-4 py-2 border border-stone-300 hover:border-red-700 hover:text-red-700 transition"
-                >
-                  Ciasto
-                </Link>
-              </div>
+              <Link
+                to={`/klasyczne-pizze/${pizza.slug}`}
+                className="text-sm px-4 py-2 bg-red-700 text-white hover:bg-red-800 transition inline-block"
+              >
+                Zobacz przepis
+              </Link>
             </div>
           </article>
         ))}
@@ -191,21 +177,6 @@ export default function KlasycznePizze() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="mt-12 text-center">
-        <Link
-          to="/ciasto/style"
-          className="inline-block bg-red-700 text-white px-8 py-4 hover:bg-red-800 transition mr-4"
-        >
-          Wybierz styl ciasta
-        </Link>
-        <Link
-          to="/skladniki"
-          className="inline-block border border-stone-300 px-8 py-4 hover:border-red-700 hover:text-red-700 transition"
-        >
-          Poznaj składniki
-        </Link>
-      </section>
     </div>
   );
 }

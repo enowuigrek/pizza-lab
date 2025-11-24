@@ -107,30 +107,6 @@ export default function PizzaDetail() {
         </section>
       )}
 
-      {/* Related links */}
-      <section className="border-t border-stone-200 pt-8">
-        <h3 className="font-semibold mb-4 text-stone-500 uppercase text-sm tracking-wide">Zobacz również</h3>
-        <div className="flex flex-wrap gap-4">
-          <Link
-            to="/kalkulator"
-            className="px-4 py-2 border border-stone-300 text-sm hover:border-red-700 hover:text-red-700 transition"
-          >
-            Kalkulator ciasta
-          </Link>
-          <Link
-            to="/skladniki"
-            className="px-4 py-2 border border-stone-300 text-sm hover:border-red-700 hover:text-red-700 transition"
-          >
-            Składniki
-          </Link>
-          <Link
-            to="/ciasto"
-            className="px-4 py-2 border border-stone-300 text-sm hover:border-red-700 hover:text-red-700 transition"
-          >
-            Przygotowanie ciasta
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

@@ -5,20 +5,21 @@ import Footer from './components/layout/Footer';
 // Pages
 import Home from './pages/Home';
 import Calculator from './pages/Calculator';
-import CiastoOverview from './pages/ciasto/CiastoOverview';
-import StyleCiasta from './pages/ciasto/StyleCiasta';
+import DoughOverview from './pages/ciasto/DoughOverview';
+import DoughStyles from './pages/ciasto/DoughStyles';
 import Dough from './pages/Dough';
 import Toppings from './pages/Toppings';
 import FloursList from './pages/flours/FloursList';
 import FlourDetail from './pages/flours/FlourDetail';
 import KlasycznePizze from './pages/KlasycznePizze';
-import MojeWariacje from './pages/MojeWariacje';
+import MyVariations from './pages/MyVariations';
 import PizzaGuide from './pages/pizzas/PizzaGuide';
 import PizzaDetail from './pages/pizzas/PizzaDetail';
 import IngredientsList from './pages/ingredients/IngredientsList';
 import IngredientDetail from './pages/ingredients/IngredientDetail';
 import ArticlesList from './pages/articles/ArticlesList';
 import ArticleDetail from './pages/articles/ArticleDetail';
+import About from './pages/About';
 
 // 404 Page
 function NotFound() {
@@ -54,8 +55,8 @@ export default function App() {
           <Route path="/kalkulator" element={<Calculator />} />
 
           {/* Ciasto */}
-          <Route path="/ciasto" element={<CiastoOverview />} />
-          <Route path="/ciasto/style" element={<StyleCiasta />} />
+          <Route path="/ciasto" element={<DoughOverview />} />
+          <Route path="/ciasto/style" element={<DoughStyles />} />
           <Route path="/ciasto/zaczyny" element={<Dough />} />
           <Route path="/ciasto/fermentacja" element={<Dough />} />
           <Route path="/ciasto/techniki" element={<Dough />} />
@@ -76,7 +77,7 @@ export default function App() {
           <Route path="/klasyczne-pizze/:slug" element={<PizzaDetail />} />
 
           {/* Moje Wariacje */}
-          <Route path="/moje-wariacje" element={<MojeWariacje />} />
+          <Route path="/moje-wariacje" element={<MyVariations />} />
 
           {/* Legacy routes - redirects */}
           <Route path="/przewodnik" element={<KlasycznePizze />} />
@@ -86,6 +87,9 @@ export default function App() {
           {/* Artykuły (Articles) */}
           <Route path="/artykuly" element={<ArticlesList />} />
           <Route path="/artykuly/:slug" element={<ArticleDetail />} />
+
+          {/* O mnie (About) */}
+          <Route path="/o-mnie" element={<About />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFound />} />
