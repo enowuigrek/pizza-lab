@@ -15,10 +15,11 @@ export default function KlasycznePizze() {
       {/* Info box */}
       <div className="bg-amber-50 border-l-4 border-amber-600 p-6 mb-12">
         <h2 className="font-semibold mb-2">O klasycznych pizzach</h2>
+        <p className="text-sm text-stone-700 leading-relaxed mb-4">
+          W pizzeriach, przeglądając menu, spotykamy zarówno autorskie kompozycje lokalu, jak i nazwy uznawane za klasyczne, które z założenia powinny podpowiadać, czego się spodziewać. W praktyce bywa różnie — zamawiasz pizzę znaną z nazwy, a na stolik trafia wersja, która odbiega od tego, co uznaje się za tradycyjny skład. To normalne, bo wiele klasyków ma lokalne interpretacje, a część z nich w Polsce przyjęła się w uproszczonej formie.
+        </p>
         <p className="text-sm text-stone-700 leading-relaxed">
-          Te przepisy oparte są na tradycyjnych włoskich recepturach. Każda pizza linkuje
-          do konkretnych składników i technik ciasta, żebyś mógł zgłębić szczegóły.
-          Pamiętaj — pizza to nie tylko przepis, to technika i jakość składników.
+          Dlatego poniżej przedstawiam te pizze w ich tradycyjnych wersjach, z zaznaczeniem, jak najczęściej serwuje się je w naszych pizzeriach. Dzięki temu łatwiej zrozumiesz, skąd biorą się różnice między nazwą w menu a tym, co faktycznie pojawia się na talerzu.
         </p>
       </div>
 
