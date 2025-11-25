@@ -85,7 +85,7 @@ export default function PizzaDetail() {
       {/* What to avoid */}
       {pizza.avoid && pizza.avoid.length > 0 && (
         <section className="mb-8 info-section info-section--negative">
-          <h2 className="text-2xl mb-4">Czego unikać</h2>
+          <h2 className="text-2xl mb-4">Częste uproszczenia</h2>
           <ul className="space-y-4">
             {pizza.avoid.map((item, idx) => (
               <li key={idx}>

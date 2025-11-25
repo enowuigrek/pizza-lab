@@ -270,14 +270,12 @@ export default function FloursList() {
             image={flour.image_url}
             showLeftBorder={true}
             showDetailsButton={true}
-            badge={
-              <Badge variant="neutral">
-                Tipo {flour.type}
-              </Badge>
-            }
           >
             <div className="mt-3">
               <div className="flex flex-wrap gap-2">
+                <span className="text-xs bg-stone-100 px-2 py-1">
+                  Tipo {flour.type}
+                </span>
                 <span className="text-xs bg-stone-100 px-2 py-1">
                   W {flour.w_strength}
                 </span>

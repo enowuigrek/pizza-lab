@@ -99,9 +99,9 @@ export const pizzas = [
     id: 3,
     name: "Capricciosa",
     slug: "capricciosa",
-    description: "Capricciosa to jedna z najbardziej rozpoznawalnych pizz - zarówno we Włoszech, jak i w Polsce. U nas najczęściej kojarzy się z prostym zestawem: szynka i pieczarki, jednak klasyczna wersja jest bogatsza i zawiera składniki, które nadają jej charakterystyczny profil: karczochy, oliwki, pieczarki i szynkę cotto. Tradycyjnie układano je w osobnych 'ćwiartkach', choć obecnie często miesza się je na całej powierzchni.",
-    style: "romana-tonda",
-    styleName: "Romana Tonda",
+    description: "Capricciosa to jedna z najbardziej rozpoznawalnych pizz — zarówno we Włoszech, jak i w Polsce. U nas najczęściej kojarzy się z prostym zestawem: szynka i pieczarki, jednak klasyczna wersja jest bogatsza i zawiera składniki, które nadają jej charakterystyczny profil: karczochy, oliwki, pieczarki i szynkę cotto. Tradycyjnie układano je w osobnych „ćwiartkach", choć obecnie często miesza się je na całej powierzchni.",
+    style: "dowolny",
+    styleName: "Dowolny — Capricciosę można przygotować na większości stylów ciasta, od neapolitańskiego, przez klasyczne, po New York czy Romaną Tondą.",
     authentic: {
       ingredients: [
         { name: "pomidory", required: true },

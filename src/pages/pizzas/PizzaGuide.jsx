@@ -13,10 +13,11 @@ export default function PizzaGuide() {
 
       {/* Intro box */}
       <div className="bg-stone-50 border border-stone-200 p-6 mb-12">
+        <p className="text-stone-700 mb-4">
+          W pizzeriach, przeglądając menu, spotykamy zarówno autorskie kompozycje lokalu, jak i nazwy uznawane za klasyczne, które z założenia powinny podpowiadać, czego się spodziewać. W praktyce bywa różnie — zamawiasz pizzę znaną z nazwy, a na stolik trafia wersja, która odbiega od tego, co uznaje się za tradycyjny skład. To normalne, bo wiele klasyków ma lokalne interpretacje, a część z nich w Polsce przyjęła się w uproszczonej formie.
+        </p>
         <p className="text-stone-700">
-          Każda pizza ma swoją historię i autentyczny przepis. W tym przewodniku znajdziesz
-          oryginalne składniki oraz informacje o regionalnych wariantach i lokalnych adaptacjach
-          spotykanych w Polsce.
+          Dlatego poniżej przedstawiam te pizze w ich tradycyjnych wersjach, z zaznaczeniem, jak najczęściej serwuje się je w naszych pizzeriach. Dzięki temu łatwiej zrozumiesz, skąd biorą się różnice między nazwą w menu a tym, co faktycznie pojawia się na talerzu.
         </p>
       </div>
 
