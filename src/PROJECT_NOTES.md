@@ -41,15 +41,22 @@ Opisujemy różnice między wersjami autentycznymi a lokalnymi adaptacjami - nie
 / (Home)
 ├── /kalkulator
 ├── /ciasto
-│   ├── /maki (włączone w ciasto)
-│   └── /kalkulator (włączony w ciasto)
-├── /toppingi
-│   ├── /skladniki (włączone w toppingi)
-│   └── /toppingi/[slug]
-├── /przewodnik (pizze)
-│   └── /przewodnik/[slug]
-└── /artykuly
-    └── /artykuly/[slug]
+│   ├── /ciasto/maki
+│   ├── /ciasto/style
+│   └── /ciasto/techniki
+├── /skladniki (toppingi)
+│   ├── /skladniki/:category
+│   └── /skladniki/:category/:slug
+├── /klasyczne-pizze (przewodnik po pizzach)
+│   └── /klasyczne-pizze/:slug
+├── /moje-wariacje
+├── /artykuly
+│   └── /artykuly/:slug
+└── /o-mnie
+
+Legacy redirects:
+- /przewodnik → /klasyczne-pizze
+- /toppingi → /skladniki
 ```
 
 ---
@@ -57,21 +64,29 @@ Opisujemy różnice między wersjami autentycznymi a lokalnymi adaptacjami - nie
 ## Sekcje platformy
 
 ### 1. Ciasto
-- Kalkulator ciasta
-- Baza mąk
-- Parametry mąki
-- Zaczyny (poolish, biga)
+- Kalkulator ciasta (z poolish, biga, direct)
+- Baza mąk (Caputo, 5 Stagioni, etc.)
+- Style ciasta (Napoletana, Romana, New York, etc.)
+- Techniki (poolish, biga, autolyza, balling)
 
-### 2. Toppingi
+### 2. Składniki (Toppingi)
 - Przewodnik po składnikach
 - Kategorie: sery, pomidory, mięso, warzywa, oleje
+- Szczegółowe opisy składników
 
-### 3. Przewodnik
-- Przewodnik po pizzach
+### 3. Klasyczne Pizze (Przewodnik)
+- Przewodnik po pizzach (Margherita, Diavola, Capricciosa, etc.)
 - Historie pizz
 - Autentyczne przepisy
+- Częste uproszczenia i błędy
 
-### 4. Artykuły
+### 4. Moje Wariacje
+- Autorskie przepisy
+- Eksperymenty
+- Niekonwencjonalne podejścia
+
+### 5. Artykuły
 - Porady i wskazówki
 - Techniki pieczenia
-- Historia pizzy
+- Testy i porównania
+- Filozofia pizzy

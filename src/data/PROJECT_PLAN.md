@@ -319,6 +319,15 @@ CREATE TABLE articles (
 
 ## Changelog
 
+### 2025-11-25
+- Unified pizza data source (single source of truth in pizzas.js)
+- Fixed data inconsistency between pizza cards and detail pages
+- Made entire pizza cards clickable (improved UX)
+- Added tagline and icon fields to all pizzas
+- Added styleDescription field for detailed style information
+- Updated routing structure (/klasyczne-pizze as main, /przewodnik as legacy)
+- Updated documentation (style guide, project notes)
+
 ### 2024-11-24
 - Initial project setup complete
 - All core pages implemented

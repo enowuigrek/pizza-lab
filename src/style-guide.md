@@ -62,8 +62,8 @@
 ## Ikony i grafika
 
 ### Zasady
-- **BEZ EMOJI** w interfejsie (wyjątek: sekcje edukacyjne z flagami 🇮🇹 🇵🇱)
-- Logo pizzy jako jedyny element graficzny (placeholder)
+- **Emoji dopuszczalne** jako ikony dla pizz (🇮🇹 🌶️ 🍄 ⚓ 🧀) i flagi 🇮🇹 🇵🇱
+- Logo pizzy jako placeholder gdy brak zdjęcia
 - Proste, liniowe ikony jeśli potrzebne (Lucide, Heroicons outline)
 - Zdjęcia: wysokiej jakości, naturalne kolory
 
@@ -106,6 +106,9 @@
 ---
 
 ## Changelog
+
+### 2025-11-25
+- Aktualizacja zasad emoji - dopuszczalne jako ikony dla pizz
 
 ### 2024-11-24
 - Utworzenie style guide
