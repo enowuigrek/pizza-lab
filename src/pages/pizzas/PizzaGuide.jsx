@@ -25,10 +25,10 @@ export default function PizzaGuide() {
         {pizzas.map(pizza => (
           <Card
             key={pizza.id}
-            link={`/przewodnik/${pizza.slug}`}
+            link={`/klasyczne-pizze/${pizza.slug}`}
             title={pizza.name}
             image={pizza.image_url}
-            showDetailsButton={true}
+            showDetailsButton={false}
           >
             <p className="text-sm text-stone-600 mt-2">
               {pizza.description ? pizza.description.substring(0, 120) : ''}...

@@ -1,61 +1,5 @@
 import { Link } from 'react-router-dom';
-
-const classicPizzas = [
-  {
-    slug: 'margherita',
-    name: 'Margherita',
-    tagline: 'Królowa prostoty',
-    description: 'Najprostsza i najbardziej kultowa pizza. Sos pomidorowy, mozzarella, bazylia, oliwa. Punkt odniesienia dla każdego pizzaiolo.',
-    ingredients: ['Sos pomidorowy San Marzano', 'Mozzarella fior di latte lub bufala', 'Świeża bazylia', 'Oliwa extra virgin'],
-    style: 'Napoletana',
-    icon: '🇮🇹'
-  },
-  {
-    slug: 'marinara',
-    name: 'Marinara',
-    tagline: 'Esencja smaku',
-    description: 'Najstarsza pizza — bez sera. Tylko sos pomidorowy, czosnek, oregano i oliwa. Prosta, ale pełna smaku.',
-    ingredients: ['Sos pomidorowy San Marzano', 'Czosnek', 'Oregano', 'Oliwa extra virgin'],
-    style: 'Napoletana',
-    icon: '⚓'
-  },
-  {
-    slug: 'diavola',
-    name: 'Diavola',
-    tagline: 'Pikantna klasyka',
-    description: 'Margherita z dodatkiem pikantnego salami. W niektórych regionach znana jako "Piccante".',
-    ingredients: ['Sos pomidorowy San Marzano', 'Mozzarella fior di latte', 'Salami piccante lub ventricina', 'Bazylia', 'Oliwa'],
-    style: 'Napoletana / Romana',
-    icon: '🌶️'
-  },
-  {
-    slug: 'capricciosa',
-    name: 'Capricciosa',
-    tagline: 'Bogactwo smaków',
-    description: 'Pizza z szynką, pieczarkami, karczochami i oliwkami. Klasyk włoskiej pizzerii.',
-    ingredients: ['Sos pomidorowy', 'Mozzarella', 'Prosciutto cotto', 'Pieczarki', 'Karczochy', 'Oliwki', 'Bazylia'],
-    style: 'Romana Tonda',
-    icon: '🍄'
-  },
-  {
-    slug: 'quattro-formaggi',
-    name: 'Quattro Formaggi',
-    tagline: 'Cztery sery',
-    description: 'Biała pizza z czterema serami — mozzarella, gorgonzola, fontina i parmigiano. Bez sosu pomidorowego.',
-    ingredients: ['Mozzarella', 'Gorgonzola dolce', 'Fontina', 'Parmigiano Reggiano', 'Oliwa'],
-    style: 'Romana / Napoletana',
-    icon: '🧀'
-  },
-  {
-    slug: 'prosciutto-funghi',
-    name: 'Prosciutto e Funghi',
-    tagline: 'Szynka i grzyby',
-    description: 'Prosta kombinacja szynki gotowanej i pieczarek. Ulubiona pizza dzieci i dorosłych.',
-    ingredients: ['Sos pomidorowy', 'Mozzarella', 'Prosciutto cotto', 'Pieczarki świeże', 'Bazylia'],
-    style: 'Uniwersalna',
-    icon: '🍕'
-  }
-];
+import { pizzas } from '../data/pizzas';
 
 export default function KlasycznePizze() {
   return (
@@ -80,10 +24,11 @@ export default function KlasycznePizze() {
 
       {/* Pizzas grid */}
       <div className="grid md:grid-cols-2 gap-8">
-        {classicPizzas.map((pizza) => (
-          <article
+        {pizzas.map((pizza) => (
+          <Link
             key={pizza.slug}
-            className="bg-white border border-stone-200 hover:border-red-700 transition group border-l-4 border-l-red-700"
+            to={`/klasyczne-pizze/${pizza.slug}`}
+            className="bg-white border border-stone-200 hover:border-red-700 transition group border-l-4 border-l-red-700 block"
           >
             <div className="p-6">
               <div className="flex items-center gap-3 mb-3">
@@ -95,7 +40,7 @@ export default function KlasycznePizze() {
               </div>
 
               <p className="text-stone-700 mb-4 leading-relaxed">
-                {pizza.description}
+                {pizza.description.substring(0, 150)}...
               </p>
 
               <div className="mb-4">
@@ -103,10 +48,10 @@ export default function KlasycznePizze() {
                   Składniki
                 </h3>
                 <ul className="space-y-1 text-sm">
-                  {pizza.ingredients.map((ingredient, idx) => (
+                  {pizza.authentic.ingredients.slice(0, 5).map((ingredient, idx) => (
                     <li key={idx} className="flex items-start">
                       <span className="w-1 h-1 rounded-full bg-red-700 mt-2 mr-2 flex-shrink-0"></span>
-                      <span className="text-stone-700">{ingredient}</span>
+                      <span className="text-stone-700">{ingredient.name}</span>
                     </li>
                   ))}
                 </ul>
@@ -114,17 +59,14 @@ export default function KlasycznePizze() {
 
               <div className="mb-6">
                 <span className="text-xs text-stone-500 uppercase tracking-wide">Styl ciasta</span>
-                <p className="text-sm font-semibold">{pizza.style}</p>
+                <p className="text-sm font-semibold">{pizza.styleName}</p>
               </div>
 
-              <Link
-                to={`/klasyczne-pizze/${pizza.slug}`}
-                className="text-sm px-4 py-2 bg-red-700 text-white hover:bg-red-800 transition inline-block"
-              >
+              <span className="text-sm px-4 py-2 bg-red-700 text-white hover:bg-red-800 transition inline-block">
                 Zobacz przepis
-              </Link>
+              </span>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
 

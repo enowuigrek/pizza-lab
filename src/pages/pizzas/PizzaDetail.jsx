@@ -60,6 +60,9 @@ export default function PizzaDetail() {
           >
             {pizza.styleName}
           </Link>
+          {pizza.styleDescription && (
+            <p className="text-stone-600 text-sm mt-3">{pizza.styleDescription}</p>
+          )}
           <p className="text-stone-600 text-sm mt-2">Kliknij, aby poznać szczegóły tego stylu ciasta</p>
         </section>
       )}
