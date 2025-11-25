@@ -24,7 +24,7 @@ export default function Card({
       className={`bg-white border border-stone-200 ${borderClass} hover:border-stone-300 transition overflow-hidden ${link ? 'block' : ''} ${className}`}
     >
       {image && (
-        <div className="h-48 bg-gray-200 relative overflow-hidden flex items-center justify-center">
+        <div className="h-64 bg-gray-200 relative overflow-hidden flex items-center justify-center">
           <img
             src={image}
             alt={imageAlt || title}
@@ -48,8 +48,8 @@ export default function Card({
         {children}
         {showDetailsButton && link && (
           <div className="mt-4">
-            <span className="inline-block text-sm text-red-700 hover:text-red-800 font-semibold">
-              Zobacz szczegóły →
+            <span className="inline-block text-sm px-4 py-2 bg-red-700 text-white hover:bg-red-800 transition font-semibold">
+              Zobacz szczegóły
             </span>
           </div>
         )}
